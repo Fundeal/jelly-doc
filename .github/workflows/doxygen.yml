@@ -1,0 +1,43 @@
+# Sample workflow for building and deploying a Jekyll site to GitHub Pages
+name: Deploy Doxygen
+
+on:
+  schedule:
+    - cron: "0 */24 * * *"
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps: 
+      - uses: actions/checkout@v3
+          
+      - uses: actions/checkout@v3
+        with:
+          repository: Fundeal/jelly-main
+          path: j
+          token: ${{ secrets.TOKEN }}
+      
+      
+      - run: mv Doxyfile j/Jelly/Assets/Scripts
+      
+      - uses: mattnotmitt/doxygen-action@v1
+        with:
+            working-directory: 'j/Jelly/Assets/Scripts/'
+    
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: j/Jelly/Assets/Scripts/Jelly_docs/html
