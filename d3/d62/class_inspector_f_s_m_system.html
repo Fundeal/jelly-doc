@@ -251,9 +251,8 @@ Protected 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   64</span>        CurrentState = state;</div>
 <div class="line"><span class="lineno">   65</span>        nextState.enabled = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>        <span class="comment">// CB.Log($&quot;Changed GameState: {state}&quot;);</span></div>
-<div class="line"><span class="lineno">   68</span>        nextState.StartState();</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="line"><span class="lineno">   67</span>        nextState.StartState();</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -280,35 +279,33 @@ Protected 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/d5a/_inspector_f_s_m_system_8cs_source.html">InspectorFSMSystem.cs</a> 파일의 <a class="el" href="../../d2/d5a/_inspector_f_s_m_system_8cs_source.html#l00071">71</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
-<div class="line"><span class="lineno">   73</span>        var states = GetComponents&lt;TBaseClass&gt;();</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">foreach</span> (var state <span class="keywordflow">in</span> states)</div>
-<div class="line"><span class="lineno">   75</span>        {</div>
-<div class="line"><span class="lineno">   76</span>            state.enabled = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">if</span> (StatePool.ContainsKey(state.State))</div>
-<div class="line"><span class="lineno">   78</span>            {</div>
-<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   80</span>            }</div>
-<div class="line"><span class="lineno">   81</span>            StatePool[state.State] = state;</div>
-<div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span> </div>
-<div class="line"><span class="lineno">   84</span>        <span class="comment">// �??�테?�트�??�환?�줍?�다.</span></div>
-<div class="line"><span class="lineno">   85</span>        <span class="comment">// CB.Log($&quot;Init state: {StartState}&quot;);</span></div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (!StatePool.TryGetValue(StartState, out var initState))</div>
-<div class="line"><span class="lineno">   87</span>        {</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   89</span>        }</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">foreach</span> (var pair <span class="keywordflow">in</span> StatePool)</div>
-<div class="line"><span class="lineno">   92</span>        {</div>
-<div class="line"><span class="lineno">   93</span>            pair.Value.enabled = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   94</span>        }</div>
-<div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>        CurrentState = StartState;</div>
-<div class="line"><span class="lineno">   97</span>        initState.enabled = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   98</span>        initState.StartState();</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
+<p class="definition"><a class="el" href="../../d2/d5a/_inspector_f_s_m_system_8cs_source.html">InspectorFSMSystem.cs</a> 파일의 <a class="el" href="../../d2/d5a/_inspector_f_s_m_system_8cs_source.html#l00070">70</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        var states = GetComponents&lt;TBaseClass&gt;();</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">foreach</span> (var state <span class="keywordflow">in</span> states)</div>
+<div class="line"><span class="lineno">   74</span>        {</div>
+<div class="line"><span class="lineno">   75</span>            state.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (StatePool.ContainsKey(state.State))</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   79</span>            }</div>
+<div class="line"><span class="lineno">   80</span>            StatePool[state.State] = state;</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (!StatePool.TryGetValue(StartState, out var initState))</div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">foreach</span> (var pair <span class="keywordflow">in</span> StatePool)</div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            pair.Value.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>        CurrentState = StartState;</div>
+<div class="line"><span class="lineno">   94</span>        initState.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   95</span>        initState.StartState();</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -456,7 +453,7 @@ Protected 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d3/d62/class_inspector_f_s_m_system.html">InspectorFSMSystem</a></li>
-    <li class="footer">생성시간 : 수 5월 3 2023 00:39:34, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 목 5월 4 2023 00:40:44, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

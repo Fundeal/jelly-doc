@@ -1,10 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "abcefioprst",
+  0: "_abcefinoprstu",
   1: "abeiopt",
   2: "f",
-  3: "aceirs",
-  4: "fs"
+  3: "aceirsu",
+  4: "_n",
+  5: "fs"
 };
 
 var indexSectionNames =
@@ -13,7 +14,8 @@ var indexSectionNames =
   1: "classes",
   2: "namespaces",
   3: "functions",
-  4: "properties"
+  4: "variables",
+  5: "properties"
 };
 
 var indexSectionLabels =
@@ -22,6 +24,7 @@ var indexSectionLabels =
   1: "클래스",
   2: "네임스페이스들",
   3: "함수",
-  4: "속성"
+  4: "변수",
+  5: "속성"
 };
 

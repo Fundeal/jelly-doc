@@ -35,6 +35,7 @@ var NAVTREE =
       [ "클래스 멤버", "functions.html", [
         [ "모두", "functions.html", null ],
         [ "함수", "functions_func.html", null ],
+        [ "변수", "functions_vars.html", null ],
         [ "속성", "functions_prop.html", null ]
       ] ]
     ] ],

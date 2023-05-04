@@ -103,15 +103,17 @@ Fundeal.Framework.PrepareFSMSystem에 대한 상속 다이어그램 : </div>
  <div class="center">
   <img src="../../db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.png" usemap="#Fundeal.Framework.PrepareFSMSystem_map" alt=""/>
   <map id="Fundeal.Framework.PrepareFSMSystem_map" name="Fundeal.Framework.PrepareFSMSystem_map">
-<area href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html" alt="Fundeal.Framework.PrepareSystem" shape="rect" coords="0,56,242,80"/>
+<area href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html" title="PrepareBase를 매니징하는 시스템의 기본 클래스입니다." alt="Fundeal.Framework.PrepareSystem" shape="rect" coords="0,56,242,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
 <tr class="memitem:a3045702ded2fe47a1e779a1461bd7363"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.html#a3045702ded2fe47a1e779a1461bd7363">IsPrepareAvailable</a> (<a class="el" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html">PrepareBase</a> prepare)</td></tr>
+<tr class="memdesc:a3045702ded2fe47a1e779a1461bd7363"><td class="mdescLeft">&#160;</td><td class="mdescRight">_pool에 있는 해당 Prepare가 실행 중인 상황인지 확인합니다.   <a href="../../db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.html#a3045702ded2fe47a1e779a1461bd7363">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a3045702ded2fe47a1e779a1461bd7363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa033a88014d6a4662f518671ec104032"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.html#aa033a88014d6a4662f518671ec104032">UpdateSystem</a> ()</td></tr>
+<tr class="memdesc:aa033a88014d6a4662f518671ec104032"><td class="mdescLeft">&#160;</td><td class="mdescRight">해당 시스템에 종속된 모든 Update를 호출하는 함수입니다.   <a href="../../db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.html#aa033a88014d6a4662f518671ec104032">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:aa033a88014d6a4662f518671ec104032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a9964220793223152600c63e1e6356f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.html#a3a9964220793223152600c63e1e6356f">NextState</a> (int index=-1)</td></tr>
 <tr class="separator:a3a9964220793223152600c63e1e6356f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,19 +124,24 @@ Public 멤버 함수</h2></td></tr>
 <a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetActor</b> ()</td></tr>
 <tr class="separator:a3a33f9301c9cde949a0b9997d90b582d inherit pub_methods_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a305f69d77a7af26888eae6f8ed388661 inherit pub_methods_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a305f69d77a7af26888eae6f8ed388661">Register</a> (<a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a> actor)</td></tr>
+<tr class="memdesc:a305f69d77a7af26888eae6f8ed388661 inherit pub_methods_class_fundeal_1_1_framework_1_1_prepare_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">할당된 컨트롤러에 등록하는 함수입니다.   <a href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a305f69d77a7af26888eae6f8ed388661">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a305f69d77a7af26888eae6f8ed388661 inherit pub_methods_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99b0af2ef61a16ef4672ae5bbf1ffa79 inherit pub_methods_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memItemLeft" align="right" valign="top"><a id="a99b0af2ef61a16ef4672ae5bbf1ffa79" name="a99b0af2ef61a16ef4672ae5bbf1ffa79"></a>
-abstract void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateSystem</b> ()</td></tr>
+<tr class="memitem:a99b0af2ef61a16ef4672ae5bbf1ffa79 inherit pub_methods_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a99b0af2ef61a16ef4672ae5bbf1ffa79">UpdateSystem</a> ()</td></tr>
+<tr class="memdesc:a99b0af2ef61a16ef4672ae5bbf1ffa79 inherit pub_methods_class_fundeal_1_1_framework_1_1_prepare_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">해당 시스템에 종속된 모든 Update를 호출하는 함수입니다.   <a href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a99b0af2ef61a16ef4672ae5bbf1ffa79">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a99b0af2ef61a16ef4672ae5bbf1ffa79 inherit pub_methods_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f63b3bef2bedb1dc4782a006ae247c1 inherit pub_methods_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memItemLeft" align="right" valign="top"><a id="a9f63b3bef2bedb1dc4782a006ae247c1" name="a9f63b3bef2bedb1dc4782a006ae247c1"></a>
-abstract bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsPrepareAvailable</b> (<a class="el" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html">PrepareBase</a> prepare)</td></tr>
+<tr class="memitem:a9f63b3bef2bedb1dc4782a006ae247c1 inherit pub_methods_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memItemLeft" align="right" valign="top">abstract bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a9f63b3bef2bedb1dc4782a006ae247c1">IsPrepareAvailable</a> (<a class="el" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html">PrepareBase</a> prepare)</td></tr>
+<tr class="memdesc:a9f63b3bef2bedb1dc4782a006ae247c1 inherit pub_methods_class_fundeal_1_1_framework_1_1_prepare_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">_pool에 있는 해당 Prepare가 실행 중인 상황인지 확인합니다.   <a href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a9f63b3bef2bedb1dc4782a006ae247c1">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a9f63b3bef2bedb1dc4782a006ae247c1 inherit pub_methods_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84ac914fe8fad3fb745ccde8ba434697 inherit pub_methods_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html">PrepareSystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a84ac914fe8fad3fb745ccde8ba434697">AddPrepare</a> ()</td></tr>
+<tr class="separator:a84ac914fe8fad3fb745ccde8ba434697 inherit pub_methods_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
 <tr class="memitem:a836bf8ca710bac65b6f60a188fc5ffa4"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.html#a836bf8ca710bac65b6f60a188fc5ffa4">Init</a> ()</td></tr>
+<tr class="memdesc:a836bf8ca710bac65b6f60a188fc5ffa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">해당 시스템을 초기화 할 때 호출되는 함수입니다. 반드시 해당 함수를 커스텀할 때 base.Init();을 호출해주세요.   <a href="../../db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.html#a836bf8ca710bac65b6f60a188fc5ffa4">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a836bf8ca710bac65b6f60a188fc5ffa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00ead51c7059b40677bbe78005cbe5c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a00ead51c7059b40677bbe78005cbe5c9">Init</a> ()</td></tr>
+<tr class="memdesc:a00ead51c7059b40677bbe78005cbe5c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">해당 시스템을 초기화 할 때 호출되는 함수입니다. 반드시 해당 함수를 커스텀할 때 base.Init();을 호출해주세요.   <a href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a00ead51c7059b40677bbe78005cbe5c9">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a00ead51c7059b40677bbe78005cbe5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
@@ -146,8 +153,10 @@ Protected 멤버 함수</h2></td></tr>
 추가로 상속된 멤버들</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_fundeal_1_1_framework_1_1_prepare_system"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_fundeal_1_1_framework_1_1_prepare_system')"><img src="../../closed.png" alt="-"/>&#160;<a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html">Fundeal.Framework.PrepareSystem</a>(으)로부터 상속된 Protected 속성</td></tr>
 <tr class="memitem:a0d5d6b600ec67f697ef6f14d416d3011 inherit pro_attribs_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html">PrepareBase</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a0d5d6b600ec67f697ef6f14d416d3011">_pool</a> = null</td></tr>
+<tr class="memdesc:a0d5d6b600ec67f697ef6f14d416d3011 inherit pro_attribs_class_fundeal_1_1_framework_1_1_prepare_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">인스펙터에 있는 PrepareBase를 모아놓는 컨테이너 입니다.   <a href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a0d5d6b600ec67f697ef6f14d416d3011">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a0d5d6b600ec67f697ef6f14d416d3011 inherit pro_attribs_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af649eece0da860e808f5210c8f5248d6 inherit pro_attribs_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#af649eece0da860e808f5210c8f5248d6">_actor</a> = null</td></tr>
+<tr class="memdesc:af649eece0da860e808f5210c8f5248d6 inherit pro_attribs_class_fundeal_1_1_framework_1_1_prepare_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">해당 시스템과 연동된 액터입니다.   <a href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#af649eece0da860e808f5210c8f5248d6">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:af649eece0da860e808f5210c8f5248d6 inherit pro_attribs_class_fundeal_1_1_framework_1_1_prepare_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
@@ -221,12 +230,14 @@ Protected 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html">Fundeal.Framework.PrepareSystem</a>(으)로부터 재구현되었습니다.</p>
+<p>해당 시스템을 초기화 할 때 호출되는 함수입니다. 반드시 해당 함수를 커스텀할 때 base.Init();을 호출해주세요.  </p>
+
+<p><a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a00ead51c7059b40677bbe78005cbe5c9">Fundeal.Framework.PrepareSystem</a>(으)로부터 재구현되었습니다.</p>
 
 <p class="definition"><a class="el" href="../../d1/d92/_prepare_f_s_m_system_8cs_source.html">PrepareFSMSystem.cs</a> 파일의 <a class="el" href="../../d1/d92/_prepare_f_s_m_system_8cs_source.html#l00019">19</a> 번째 라인에서 정의되었습니다.</p>
 <div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
 <div class="line"><span class="lineno">   21</span>            base.Init();</div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">foreach</span> (var prepare <span class="keywordflow">in</span> _pool)</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">foreach</span> (var prepare <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a0d5d6b600ec67f697ef6f14d416d3011">_pool</a>)</div>
 <div class="line"><span class="lineno">   23</span>            {</div>
 <div class="line"><span class="lineno">   24</span>                prepare.enabled = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   25</span>                prepare.Register(<span class="keyword">this</span>);</div>
@@ -237,7 +248,10 @@ Protected 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   30</span> </div>
 <div class="line"><span class="lineno">   31</span>            NextState(0);</div>
 <div class="line"><span class="lineno">   32</span>        }</div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_prepare_system_html_a0d5d6b600ec67f697ef6f14d416d3011"><div class="ttname"><a href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a0d5d6b600ec67f697ef6f14d416d3011">Fundeal.Framework.PrepareSystem._pool</a></div><div class="ttdeci">PrepareBase[] _pool</div><div class="ttdoc">인스펙터에 있는 PrepareBase를 모아놓는 컨테이너 입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d75/_prepare_system_8cs_source.html#l00018">PrepareSystem.cs:18</a></div></div>
 </div><!-- fragment -->
+<p class="reference">다음을 참조함 :  <a class="el" href="../../d8/d75/_prepare_system_8cs_source.html#l00018">Fundeal.Framework.PrepareSystem._pool</a>.</p>
+
 </div>
 </div>
 <a id="a3045702ded2fe47a1e779a1461bd7363" name="a3045702ded2fe47a1e779a1461bd7363"></a>
@@ -264,7 +278,16 @@ Protected 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html">Fundeal.Framework.PrepareSystem</a>를 구현.</p>
+<p>_pool에 있는 해당 Prepare가 실행 중인 상황인지 확인합니다.  </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prepare</td><td>확인할 Prepare입니다.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+
+<p><a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a9f63b3bef2bedb1dc4782a006ae247c1">Fundeal.Framework.PrepareSystem</a>를 구현.</p>
 
 <p class="definition"><a class="el" href="../../d1/d92/_prepare_f_s_m_system_8cs_source.html">PrepareFSMSystem.cs</a> 파일의 <a class="el" href="../../d1/d92/_prepare_f_s_m_system_8cs_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
 <div class="fragment"><div class="line"><span class="lineno">   40</span>        {</div>
@@ -301,17 +324,19 @@ Protected 멤버 함수</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   58</span>        {</div>
 <div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (_currentState != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   60</span>            {</div>
-<div class="line"><span class="lineno">   61</span>                _currentState.EndState();</div>
+<div class="line"><span class="lineno">   61</span>                _currentState.<a class="code hl_function" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a25eb54d5fee1245a23c08f8dd59a31f5">EndState</a>();</div>
 <div class="line"><span class="lineno">   62</span>                _currentState.enabled = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   63</span>            }</div>
 <div class="line"><span class="lineno">   64</span> </div>
 <div class="line"><span class="lineno">   65</span>            _currentIndex = index &gt;= 0 ? index : _currentIndex + 1;</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (_currentIndex &gt;= _pool.Length) _currentIndex = 0;</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (_currentIndex &gt;= <a class="code hl_variable" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a0d5d6b600ec67f697ef6f14d416d3011">_pool</a>.Length) _currentIndex = 0;</div>
 <div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>            _currentState = _pool[_currentIndex];</div>
+<div class="line"><span class="lineno">   68</span>            _currentState = <a class="code hl_variable" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a0d5d6b600ec67f697ef6f14d416d3011">_pool</a>[_currentIndex];</div>
 <div class="line"><span class="lineno">   69</span>            _currentState.enabled = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   70</span>            _currentState.StartState();</div>
+<div class="line"><span class="lineno">   70</span>            _currentState.<a class="code hl_function" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a7f0f622b273ae5d72987f84a5679bc59">StartState</a>();</div>
 <div class="line"><span class="lineno">   71</span>        }</div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_prepare_base_html_a25eb54d5fee1245a23c08f8dd59a31f5"><div class="ttname"><a href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a25eb54d5fee1245a23c08f8dd59a31f5">Fundeal.Framework.PrepareBase.EndState</a></div><div class="ttdeci">virtual void EndState()</div><div class="ttdoc">PrepareBase의 종료 상태를 설정하는 함수입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/df9/_prepare_base_8cs_source.html#l00101">PrepareBase.cs:101</a></div></div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_prepare_base_html_a7f0f622b273ae5d72987f84a5679bc59"><div class="ttname"><a href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a7f0f622b273ae5d72987f84a5679bc59">Fundeal.Framework.PrepareBase.StartState</a></div><div class="ttdeci">virtual void StartState()</div><div class="ttdoc">PrepareBase의 시작 상태를 설정하는 함수입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/df9/_prepare_base_8cs_source.html#l00081">PrepareBase.cs:81</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -338,7 +363,9 @@ Protected 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html">Fundeal.Framework.PrepareSystem</a>를 구현.</p>
+<p>해당 시스템에 종속된 모든 Update를 호출하는 함수입니다.  </p>
+
+<p><a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a99b0af2ef61a16ef4672ae5bbf1ffa79">Fundeal.Framework.PrepareSystem</a>를 구현.</p>
 
 <p class="definition"><a class="el" href="../../d1/d92/_prepare_f_s_m_system_8cs_source.html">PrepareFSMSystem.cs</a> 파일의 <a class="el" href="../../d1/d92/_prepare_f_s_m_system_8cs_source.html#l00044">44</a> 번째 라인에서 정의되었습니다.</p>
 <div class="fragment"><div class="line"><span class="lineno">   45</span>        {</div>
@@ -349,11 +376,15 @@ Protected 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   50</span>                <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   51</span>            }</div>
 <div class="line"><span class="lineno">   52</span> </div>
-<div class="line"><span class="lineno">   53</span>            _currentState.SafeUpdate();</div>
-<div class="line"><span class="lineno">   54</span>            _currentState.UpdateActions();</div>
+<div class="line"><span class="lineno">   53</span>            _currentState.<a class="code hl_function" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a411ac7bee80114c6ce2db3630c1e605a">SafeUpdate</a>();</div>
+<div class="line"><span class="lineno">   54</span>            _currentState.<a class="code hl_function" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#ac6a9f51d5c8d0a6b65ec49b573aa01ee">UpdateActions</a>();</div>
 <div class="line"><span class="lineno">   55</span>        }</div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_prepare_base_html_a411ac7bee80114c6ce2db3630c1e605a"><div class="ttname"><a href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a411ac7bee80114c6ce2db3630c1e605a">Fundeal.Framework.PrepareBase.SafeUpdate</a></div><div class="ttdeci">abstract void SafeUpdate()</div><div class="ttdoc">PrepareBase의 업데이트 함수입니다.</div></div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_prepare_base_html_ac6a9f51d5c8d0a6b65ec49b573aa01ee"><div class="ttname"><a href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#ac6a9f51d5c8d0a6b65ec49b573aa01ee">Fundeal.Framework.PrepareBase.UpdateActions</a></div><div class="ttdeci">virtual void UpdateActions()</div><div class="ttdoc">_actionInstances 목록에 있는 모든 Action들의 업데이트 함수를 실행하는 함수입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/df9/_prepare_base_8cs_source.html#l00113">PrepareBase.cs:113</a></div></div>
 <div class="ttc" id="aclass_fundeal_1_1_framework_1_1_prepare_base_html_ae79340fe1e0d95324194d6df86147deb"><div class="ttname"><a href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#ae79340fe1e0d95324194d6df86147deb">Fundeal.Framework.PrepareBase.IsPrepared</a></div><div class="ttdeci">abstract bool IsPrepared()</div><div class="ttdoc">준비 여부를 확인하는 함수</div></div>
 </div><!-- fragment -->
+<p class="reference">다음을 참조함 :  <a class="el" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#ae79340fe1e0d95324194d6df86147deb">Fundeal.Framework.PrepareBase.IsPrepared()</a>, <a class="el" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a411ac7bee80114c6ce2db3630c1e605a">Fundeal.Framework.PrepareBase.SafeUpdate()</a>, <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00113">Fundeal.Framework.PrepareBase.UpdateActions()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">속성 문서화</h2>
@@ -390,7 +421,7 @@ Protected 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/d7d/namespace_fundeal.html">Fundeal</a></li><li class="navelem"><a class="el" href="../../d2/d28/namespace_fundeal_1_1_framework.html">Framework</a></li><li class="navelem"><a class="el" href="../../db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.html">PrepareFSMSystem</a></li>
-    <li class="footer">생성시간 : 수 5월 3 2023 00:39:34, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 목 5월 4 2023 00:40:44, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

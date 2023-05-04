@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['changestate_0',['ChangeState',['../db/d6e/class_inspector_f_s_m_base.html#a87eaf30df8855f1834b04c7f4cfb86c7',1,'InspectorFSMBase.ChangeState()'],['../d3/d62/class_inspector_f_s_m_system.html#abc30da056d95c0b61d6602ded2b462f4',1,'InspectorFSMSystem.ChangeState()']]]
+  ['basecontroller_0',['BaseController',['../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html',1,'Fundeal::Framework']]]
 ];

@@ -96,6 +96,9 @@ $(document).ready(function(){initNavTree('d8/d8f/class_fundeal_1_1_framework_1_1
   <div class="headertitle"><div class="title">Fundeal.Framework.BaseController 클래스 참조</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>기본 컨트롤러를 담당하는 추상화 클래스입니다. 해당 클래스를 상속받아 만들고자하는 컨트롤러를 생성하시면 됩니다.   
+ <a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#details">더 자세히 ...</a></p>
 <div class="dynheader">
 Fundeal.Framework.BaseController에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
@@ -110,21 +113,69 @@ Fundeal.Framework.BaseController에 대한 상속 다이어그램 : </div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
 <tr class="memitem:aacc0a8ca47d450d1cdd3defed5dc9952"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#aacc0a8ca47d450d1cdd3defed5dc9952">Register</a> (<a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a> actor)</td></tr>
+<tr class="memdesc:aacc0a8ca47d450d1cdd3defed5dc9952"><td class="mdescLeft">&#160;</td><td class="mdescRight">액터에 해당 컨트롤러를 등록하는 함수입니다.   <a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#aacc0a8ca47d450d1cdd3defed5dc9952">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:aacc0a8ca47d450d1cdd3defed5dc9952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7893c4dc4cc999516c9137e5ee775b00"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a7893c4dc4cc999516c9137e5ee775b00">UpdateController</a> ()</td></tr>
+<tr class="memdesc:a7893c4dc4cc999516c9137e5ee775b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">컨트롤러에 종속된 모든 Update를 담당하는 함수입니다.   <a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a7893c4dc4cc999516c9137e5ee775b00">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a7893c4dc4cc999516c9137e5ee775b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af25b57ef4a9225ff3712eb0d714b356b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html">PrepareSystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#af25b57ef4a9225ff3712eb0d714b356b">AddLayer</a> (string fsmName)</td></tr>
+<tr class="separator:af25b57ef4a9225ff3712eb0d714b356b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected 속성</h2></td></tr>
 <tr class="memitem:abec2ee079940b3d92925992138e3f10a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#abec2ee079940b3d92925992138e3f10a">_actor</a> = null</td></tr>
+<tr class="memdesc:abec2ee079940b3d92925992138e3f10a"><td class="mdescLeft">&#160;</td><td class="mdescRight">해당 컨트롤러를 담당하는 액터입니다.   <a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#abec2ee079940b3d92925992138e3f10a">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:abec2ee079940b3d92925992138e3f10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc1b32050d7a7ad72f38657186dc53ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.html">PrepareFSMSystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#afc1b32050d7a7ad72f38657186dc53ac">_prepareFsmSystem</a> = null</td></tr>
-<tr class="separator:afc1b32050d7a7ad72f38657186dc53ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95fb1855ebcb53dbbb44e3f9f56f98e8"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html">PrepareSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a95fb1855ebcb53dbbb44e3f9f56f98e8">_layers</a></td></tr>
+<tr class="memdesc:a95fb1855ebcb53dbbb44e3f9f56f98e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">해당 컨트롤러에 할당된 PrepareSystem의 List입니다.   <a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a95fb1855ebcb53dbbb44e3f9f56f98e8">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a95fb1855ebcb53dbbb44e3f9f56f98e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock">
-<p class="definition"><a class="el" href="../../d1/da6/_base_controller_8cs_source.html">BaseController.cs</a> 파일의 <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00008">8</a> 번째 라인에서 정의되었습니다.</p>
+<div class="textblock"><p >기본 컨트롤러를 담당하는 추상화 클래스입니다. 해당 클래스를 상속받아 만들고자하는 컨트롤러를 생성하시면 됩니다.  </p>
+
+<p class="definition"><a class="el" href="../../d1/da6/_base_controller_8cs_source.html">BaseController.cs</a> 파일의 <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="af25b57ef4a9225ff3712eb0d714b356b" name="af25b57ef4a9225ff3712eb0d714b356b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af25b57ef4a9225ff3712eb0d714b356b">&#9670;&#160;</a></span>AddLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html">PrepareSystem</a> Fundeal.Framework.BaseController.AddLayer </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>fsmName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d1/da6/_base_controller_8cs_source.html">BaseController.cs</a> 파일의 <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00060">60</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            <span class="comment">// 새로 생성될 게임 오브젝트를 자식으로 추가합니다.</span></div>
+<div class="line"><span class="lineno">   63</span>            var newGameObject = <span class="keyword">new</span> GameObject(fsmName);</div>
+<div class="line"><span class="lineno">   64</span>            newGameObject.transform.parent = transform;</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>            <span class="comment">// PrepareFSMSystem 컴포넌트 추가</span></div>
+<div class="line"><span class="lineno">   67</span>            var newFsmSystem = newGameObject.AddComponent&lt;PrepareFSMSystem&gt;();</div>
+<div class="line"><span class="lineno">   68</span>            </div>
+<div class="line"><span class="lineno">   69</span>            <span class="comment">//나중에 들어갈 내용들</span></div>
+<div class="line"><span class="lineno">   70</span>            <span class="comment">// 뭐... AddPrepare라든가...</span></div>
+<div class="line"><span class="lineno">   71</span>            </div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">return</span> newFsmSystem;</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="aacc0a8ca47d450d1cdd3defed5dc9952" name="aacc0a8ca47d450d1cdd3defed5dc9952"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aacc0a8ca47d450d1cdd3defed5dc9952">&#9670;&#160;</a></span>Register()</h2>
 
@@ -149,12 +200,30 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d1/da6/_base_controller_8cs_source.html">BaseController.cs</a> 파일의 <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00022">22</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>        {</div>
-<div class="line"><span class="lineno">   24</span>            _actor = actor;</div>
-<div class="line"><span class="lineno">   25</span>            _prepareFsmSystem.Register(actor);</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
+<p>액터에 해당 컨트롤러를 등록하는 함수입니다.  </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">actor</td><td>할당받을 액터를 받아옵니다.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="../../dc/dde/class_player_controller.html#a680a5aecebd89ee753c42b4568fb5c78">PlayerController</a>에서 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="../../d1/da6/_base_controller_8cs_source.html">BaseController.cs</a> 파일의 <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <a class="code hl_variable" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#abec2ee079940b3d92925992138e3f10a">_actor</a> = actor;</div>
+<div class="line"><span class="lineno">   42</span>            InitLayers();</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">foreach</span> (var system <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a95fb1855ebcb53dbbb44e3f9f56f98e8">_layers</a>)</div>
+<div class="line"><span class="lineno">   44</span>            {</div>
+<div class="line"><span class="lineno">   45</span>                system.Register(actor);</div>
+<div class="line"><span class="lineno">   46</span>            }</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_base_controller_html_a95fb1855ebcb53dbbb44e3f9f56f98e8"><div class="ttname"><a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a95fb1855ebcb53dbbb44e3f9f56f98e8">Fundeal.Framework.BaseController._layers</a></div><div class="ttdeci">List&lt; PrepareSystem &gt; _layers</div><div class="ttdoc">해당 컨트롤러에 할당된 PrepareSystem의 List입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/_base_controller_8cs_source.html#l00023">BaseController.cs:23</a></div></div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_base_controller_html_abec2ee079940b3d92925992138e3f10a"><div class="ttname"><a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#abec2ee079940b3d92925992138e3f10a">Fundeal.Framework.BaseController._actor</a></div><div class="ttdeci">Actor _actor</div><div class="ttdoc">해당 컨트롤러를 담당하는 액터입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/_base_controller_8cs_source.html#l00017">BaseController.cs:17</a></div></div>
 </div><!-- fragment -->
+<p class="reference">다음을 참조함 :  <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00017">Fundeal.Framework.BaseController._actor</a>, <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00023">Fundeal.Framework.BaseController._layers</a>.</p>
+
 </div>
 </div>
 <a id="a7893c4dc4cc999516c9137e5ee775b00" name="a7893c4dc4cc999516c9137e5ee775b00"></a>
@@ -180,11 +249,20 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d1/da6/_base_controller_8cs_source.html">BaseController.cs</a> 파일의 <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00028">28</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
-<div class="line"><span class="lineno">   30</span>            _prepareFsmSystem.UpdateSystem();</div>
-<div class="line"><span class="lineno">   31</span>        }</div>
+<p>컨트롤러에 종속된 모든 Update를 담당하는 함수입니다.  </p>
+
+<p><a class="el" href="../../dc/dde/class_player_controller.html#a2d65f842c9f9f0770274b5ee392baa92">PlayerController</a>에서 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="../../d1/da6/_base_controller_8cs_source.html">BaseController.cs</a> 파일의 <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00052">52</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">foreach</span> (var system <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a95fb1855ebcb53dbbb44e3f9f56f98e8">_layers</a>)</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                system.UpdateSystem();</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
 </div><!-- fragment -->
+<p class="reference">다음을 참조함 :  <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00023">Fundeal.Framework.BaseController._layers</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">멤버 데이터 문서화</h2>
@@ -208,12 +286,16 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d1/da6/_base_controller_8cs_source.html">BaseController.cs</a> 파일의 <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00011">11</a> 번째 라인에서 정의되었습니다.</p>
+<p>해당 컨트롤러를 담당하는 액터입니다.  </p>
+
+<p class="definition"><a class="el" href="../../d1/da6/_base_controller_8cs_source.html">BaseController.cs</a> 파일의 <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
+
+<p class="reference">다음에 의해서 참조됨 :  <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00039">Fundeal.Framework.BaseController.Register()</a>.</p>
 
 </div>
 </div>
-<a id="afc1b32050d7a7ad72f38657186dc53ac" name="afc1b32050d7a7ad72f38657186dc53ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc1b32050d7a7ad72f38657186dc53ac">&#9670;&#160;</a></span>_prepareFsmSystem</h2>
+<a id="a95fb1855ebcb53dbbb44e3f9f56f98e8" name="a95fb1855ebcb53dbbb44e3f9f56f98e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95fb1855ebcb53dbbb44e3f9f56f98e8">&#9670;&#160;</a></span>_layers</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,7 +304,7 @@ Protected 속성</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.html">PrepareFSMSystem</a> Fundeal.Framework.BaseController._prepareFsmSystem = null</td>
+          <td class="memname">List&lt;<a class="el" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html">PrepareSystem</a>&gt; Fundeal.Framework.BaseController._layers</td>
         </tr>
       </table>
   </td>
@@ -232,7 +314,11 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d1/da6/_base_controller_8cs_source.html">BaseController.cs</a> 파일의 <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00014">14</a> 번째 라인에서 정의되었습니다.</p>
+<p>해당 컨트롤러에 할당된 PrepareSystem의 List입니다.  </p>
+
+<p class="definition"><a class="el" href="../../d1/da6/_base_controller_8cs_source.html">BaseController.cs</a> 파일의 <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
+
+<p class="reference">다음에 의해서 참조됨 :  <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00039">Fundeal.Framework.BaseController.Register()</a>, <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00052">Fundeal.Framework.BaseController.UpdateController()</a>.</p>
 
 </div>
 </div>
@@ -245,7 +331,7 @@ Protected 속성</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/d7d/namespace_fundeal.html">Fundeal</a></li><li class="navelem"><a class="el" href="../../d2/d28/namespace_fundeal_1_1_framework.html">Framework</a></li><li class="navelem"><a class="el" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html">BaseController</a></li>
-    <li class="footer">생성시간 : 수 5월 3 2023 00:39:34, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 목 5월 4 2023 00:40:44, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

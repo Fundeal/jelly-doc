@@ -95,40 +95,68 @@ $(document).ready(function(){initNavTree('d1/da6/_base_controller_8cs_source.htm
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Collections.Generic;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d2/d28/namespace_fundeal_1_1_framework.html">Fundeal.Framework</a></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html">    8</a></span>    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code hl_class" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html">BaseController</a> : MonoBehaviour</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">protected</span> <a class="code hl_class" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a> _actor = <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        [SerializeField]</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">protected</span> <a class="code hl_class" href="../../db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.html">PrepareFSMSystem</a> _prepareFsmSystem = <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="comment">// Start is called before the first frame update</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">void</span> Start()</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> Register(<a class="code hl_class" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a> actor)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            _actor = actor;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            _prepareFsmSystem.Register(actor);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> UpdateController()</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            _prepareFsmSystem.UpdateSystem();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.Linq;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d2/d28/namespace_fundeal_1_1_framework.html">Fundeal.Framework</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html">   12</a></span>    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code hl_class" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html">BaseController</a> : MonoBehaviour</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#abec2ee079940b3d92925992138e3f10a">   17</a></span>        <span class="keyword">protected</span> <a class="code hl_class" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a> <a class="code hl_variable" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#abec2ee079940b3d92925992138e3f10a">_actor</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        [SerializeField]</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a95fb1855ebcb53dbbb44e3f9f56f98e8">   23</a></span>        <span class="keyword">protected</span> List&lt;PrepareSystem&gt; <a class="code hl_variable" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a95fb1855ebcb53dbbb44e3f9f56f98e8">_layers</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> InitLayers()</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            var layers = GetComponentsInChildren&lt;PrepareSystem&gt;(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <a class="code hl_variable" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a95fb1855ebcb53dbbb44e3f9f56f98e8">_layers</a> = layers.ToList();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#aacc0a8ca47d450d1cdd3defed5dc9952">   39</a></span>        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#aacc0a8ca47d450d1cdd3defed5dc9952">Register</a>(<a class="code hl_class" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a> actor)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <a class="code hl_variable" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#abec2ee079940b3d92925992138e3f10a">_actor</a> = actor;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            InitLayers();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">foreach</span> (var system <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a95fb1855ebcb53dbbb44e3f9f56f98e8">_layers</a>)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                system.Register(actor);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a7893c4dc4cc999516c9137e5ee775b00">   52</a></span>        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a7893c4dc4cc999516c9137e5ee775b00">UpdateController</a>()</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">foreach</span> (var system <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a95fb1855ebcb53dbbb44e3f9f56f98e8">_layers</a>)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                system.UpdateSystem();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html">PrepareSystem</a> AddLayer(<span class="keywordtype">string</span> fsmName)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="comment">// 새로 생성될 게임 오브젝트를 자식으로 추가합니다.</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            var newGameObject = <span class="keyword">new</span> GameObject(fsmName);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            newGameObject.transform.parent = transform;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="comment">// PrepareFSMSystem 컴포넌트 추가</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            var newFsmSystem = newGameObject.AddComponent&lt;<a class="code hl_class" href="../../db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.html">PrepareFSMSystem</a>&gt;();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="comment">//나중에 들어갈 내용들</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="comment">// 뭐... AddPrepare라든가...</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">return</span> newFsmSystem;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="ttc" id="aclass_fundeal_1_1_framework_1_1_actor_html"><div class="ttname"><a href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Fundeal.Framework.Actor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d68/_actor_8cs_source.html#l00008">Actor.cs:9</a></div></div>
-<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_base_controller_html"><div class="ttname"><a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html">Fundeal.Framework.BaseController</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/_base_controller_8cs_source.html#l00008">BaseController.cs:9</a></div></div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_base_controller_html"><div class="ttname"><a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html">Fundeal.Framework.BaseController</a></div><div class="ttdoc">기본 컨트롤러를 담당하는 추상화 클래스입니다. 해당 클래스를 상속받아 만들고자하는 컨트롤러를 생성하시면 됩니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/_base_controller_8cs_source.html#l00012">BaseController.cs:13</a></div></div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_base_controller_html_a7893c4dc4cc999516c9137e5ee775b00"><div class="ttname"><a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a7893c4dc4cc999516c9137e5ee775b00">Fundeal.Framework.BaseController.UpdateController</a></div><div class="ttdeci">virtual void UpdateController()</div><div class="ttdoc">컨트롤러에 종속된 모든 Update를 담당하는 함수입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/_base_controller_8cs_source.html#l00052">BaseController.cs:52</a></div></div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_base_controller_html_a95fb1855ebcb53dbbb44e3f9f56f98e8"><div class="ttname"><a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a95fb1855ebcb53dbbb44e3f9f56f98e8">Fundeal.Framework.BaseController._layers</a></div><div class="ttdeci">List&lt; PrepareSystem &gt; _layers</div><div class="ttdoc">해당 컨트롤러에 할당된 PrepareSystem의 List입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/_base_controller_8cs_source.html#l00023">BaseController.cs:23</a></div></div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_base_controller_html_aacc0a8ca47d450d1cdd3defed5dc9952"><div class="ttname"><a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#aacc0a8ca47d450d1cdd3defed5dc9952">Fundeal.Framework.BaseController.Register</a></div><div class="ttdeci">virtual void Register(Actor actor)</div><div class="ttdoc">액터에 해당 컨트롤러를 등록하는 함수입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/_base_controller_8cs_source.html#l00039">BaseController.cs:39</a></div></div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_base_controller_html_abec2ee079940b3d92925992138e3f10a"><div class="ttname"><a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#abec2ee079940b3d92925992138e3f10a">Fundeal.Framework.BaseController._actor</a></div><div class="ttdeci">Actor _actor</div><div class="ttdoc">해당 컨트롤러를 담당하는 액터입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/_base_controller_8cs_source.html#l00017">BaseController.cs:17</a></div></div>
 <div class="ttc" id="aclass_fundeal_1_1_framework_1_1_prepare_f_s_m_system_html"><div class="ttname"><a href="../../db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.html">Fundeal.Framework.PrepareFSMSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d92/_prepare_f_s_m_system_8cs_source.html#l00008">PrepareFSMSystem.cs:9</a></div></div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_prepare_system_html"><div class="ttname"><a href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html">Fundeal.Framework.PrepareSystem</a></div><div class="ttdoc">PrepareBase를 매니징하는 시스템의 기본 클래스입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d75/_prepare_system_8cs_source.html#l00011">PrepareSystem.cs:12</a></div></div>
 <div class="ttc" id="anamespace_fundeal_1_1_framework_html"><div class="ttname"><a href="../../d2/d28/namespace_fundeal_1_1_framework.html">Fundeal.Framework</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0b/_action_8cs_source.html#l00005">Action.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -136,7 +164,7 @@ $(document).ready(function(){initNavTree('d1/da6/_base_controller_8cs_source.htm
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_bcbb2cf9a3d3d83e5515c82071a07177.html">Framework</a></li><li class="navelem"><a class="el" href="../../dir_dde5c02d0f17a0f8f661305c9d4b2c15.html">Controller</a></li><li class="navelem"><b>BaseController.cs</b></li>
-    <li class="footer">생성시간 : 수 5월 3 2023 00:39:34, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 목 5월 4 2023 00:40:44, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

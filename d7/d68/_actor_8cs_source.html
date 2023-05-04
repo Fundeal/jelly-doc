@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('d7/d68/_actor_8cs_source.html','../../
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            _controller?.Register(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            _controller?.<a class="code hl_function" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#aacc0a8ca47d450d1cdd3defed5dc9952">Register</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        }</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="comment">// Start is called before the first frame update</span></div>
@@ -123,13 +123,15 @@ $(document).ready(function(){initNavTree('d7/d68/_actor_8cs_source.html','../../
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="comment">// Update is called once per frame</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> Update()</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            _controller?.UpdateController();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            _controller?.<a class="code hl_function" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a7893c4dc4cc999516c9137e5ee775b00">UpdateController</a>();</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
 <div class="ttc" id="aclass_fundeal_1_1_framework_1_1_actor_html"><div class="ttname"><a href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Fundeal.Framework.Actor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d68/_actor_8cs_source.html#l00008">Actor.cs:9</a></div></div>
-<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_base_controller_html"><div class="ttname"><a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html">Fundeal.Framework.BaseController</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/_base_controller_8cs_source.html#l00008">BaseController.cs:9</a></div></div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_base_controller_html"><div class="ttname"><a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html">Fundeal.Framework.BaseController</a></div><div class="ttdoc">기본 컨트롤러를 담당하는 추상화 클래스입니다. 해당 클래스를 상속받아 만들고자하는 컨트롤러를 생성하시면 됩니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/_base_controller_8cs_source.html#l00012">BaseController.cs:13</a></div></div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_base_controller_html_a7893c4dc4cc999516c9137e5ee775b00"><div class="ttname"><a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a7893c4dc4cc999516c9137e5ee775b00">Fundeal.Framework.BaseController.UpdateController</a></div><div class="ttdeci">virtual void UpdateController()</div><div class="ttdoc">컨트롤러에 종속된 모든 Update를 담당하는 함수입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/_base_controller_8cs_source.html#l00052">BaseController.cs:52</a></div></div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_base_controller_html_aacc0a8ca47d450d1cdd3defed5dc9952"><div class="ttname"><a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#aacc0a8ca47d450d1cdd3defed5dc9952">Fundeal.Framework.BaseController.Register</a></div><div class="ttdeci">virtual void Register(Actor actor)</div><div class="ttdoc">액터에 해당 컨트롤러를 등록하는 함수입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/_base_controller_8cs_source.html#l00039">BaseController.cs:39</a></div></div>
 <div class="ttc" id="anamespace_fundeal_1_1_framework_html"><div class="ttname"><a href="../../d2/d28/namespace_fundeal_1_1_framework.html">Fundeal.Framework</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0b/_action_8cs_source.html#l00005">Action.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -137,7 +139,7 @@ $(document).ready(function(){initNavTree('d7/d68/_actor_8cs_source.html','../../
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_bcbb2cf9a3d3d83e5515c82071a07177.html">Framework</a></li><li class="navelem"><a class="el" href="../../dir_6fdbd9c229dfb0677007e0ba81d862b8.html">Objects</a></li><li class="navelem"><b>Actor.cs</b></li>
-    <li class="footer">생성시간 : 수 5월 3 2023 00:39:34, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 목 5월 4 2023 00:40:44, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

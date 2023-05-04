@@ -149,40 +149,37 @@ $(document).ready(function(){initNavTree('d2/d5a/_inspector_f_s_m_system_8cs_sou
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        CurrentState = state;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        nextState.enabled = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="comment">// CB.Log($&quot;Changed GameState: {state}&quot;);</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        nextState.StartState();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> InitStatePool()</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        var states = GetComponents&lt;TBaseClass&gt;();</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">foreach</span> (var state <span class="keywordflow">in</span> states)</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            state.enabled = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">if</span> (StatePool.ContainsKey(state.State))</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            StatePool[state.State] = state;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="comment">// �??�테?�트�??�환?�줍?�다.</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="comment">// CB.Log($&quot;Init state: {StartState}&quot;);</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">if</span> (!StatePool.TryGetValue(StartState, out var initState))</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">foreach</span> (var pair <span class="keywordflow">in</span> StatePool)</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            pair.Value.enabled = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        CurrentState = StartState;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        initState.enabled = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        initState.StartState();</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        nextState.StartState();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> InitStatePool()</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        var states = GetComponents&lt;TBaseClass&gt;();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">foreach</span> (var state <span class="keywordflow">in</span> states)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            state.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">if</span> (StatePool.ContainsKey(state.State))</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            StatePool[state.State] = state;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">if</span> (!StatePool.TryGetValue(StartState, out var initState))</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">foreach</span> (var pair <span class="keywordflow">in</span> StatePool)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            pair.Value.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        CurrentState = StartState;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        initState.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        initState.StartState();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
 <div class="ttc" id="aclass_inspector_f_s_m_system_html"><div class="ttname"><a href="../../d3/d62/class_inspector_f_s_m_system.html">InspectorFSMSystem</a></div><div class="ttdoc">Inspector�??�용??FSM System ?�래?�입?�다. ?�당 ?�래?��? ?�속받아 FSM System??커스?�?�시�??�니??</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_inspector_f_s_m_system_8cs_source.html#l00021">InspectorFSMSystem.cs:24</a></div></div>
 <div class="ttc" id="aclass_inspector_f_s_m_system_html_abc30da056d95c0b61d6602ded2b462f4"><div class="ttname"><a href="../../d3/d62/class_inspector_f_s_m_system.html#abc30da056d95c0b61d6602ded2b462f4">InspectorFSMSystem.ChangeState</a></div><div class="ttdeci">virtual void ChangeState(TStateEnum state)</div><div class="ttdoc">?�당 FSM ?�스?�의 State�?바꿉?�다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_inspector_f_s_m_system_8cs_source.html#l00047">InspectorFSMSystem.cs:47</a></div></div>
 <div class="ttc" id="ainterface_inspector_f_s_m_base_interface_html"><div class="ttname"><a href="../../df/df4/interface_inspector_f_s_m_base_interface.html">InspectorFSMBaseInterface</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d49/_inspector_f_s_m_base_8cs_source.html#l00004">InspectorFSMBase.cs:6</a></div></div>
@@ -193,7 +190,7 @@ $(document).ready(function(){initNavTree('d2/d5a/_inspector_f_s_m_system_8cs_sou
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_bcbb2cf9a3d3d83e5515c82071a07177.html">Framework</a></li><li class="navelem"><a class="el" href="../../dir_9f165b2481dacfe69aa54d326bd5cd47.html">Core</a></li><li class="navelem"><a class="el" href="../../dir_29aa275ae8ac3282c484e3204efe08fe.html">InspectorFSM</a></li><li class="navelem"><b>InspectorFSMSystem.cs</b></li>
-    <li class="footer">생성시간 : 수 5월 3 2023 00:39:34, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 목 5월 4 2023 00:40:44, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>
