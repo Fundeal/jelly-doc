@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['testactor_0',['TestActor',['../d0/d1a/class_test_actor.html',1,'']]],
-  ['turningaction_1',['TurningAction',['../de/d9d/class_turning_action.html',1,'']]]
+  ['hitsystem_0',['HitSystem',['../db/dac/class_fundeal_1_1_framework_1_1_hit_system.html',1,'Fundeal::Framework']]]
 ];

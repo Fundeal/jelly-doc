@@ -158,28 +158,36 @@ $(document).ready(function(){initNavTree('da/d58/_player_raycast_action_8cs_sour
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">for</span> (var i = 0; i &lt; _maxReflections; ++i)</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        {</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="comment">// 레이 캐스트를 쏘고, 충돌 여부 확인</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">if</span> (Physics.Raycast(_startPos, _direction, out var hit, distance) &amp;&amp;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                hit.collider.CompareTag(<span class="stringliteral">&quot;Player&quot;</span>) == <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                ++_line.positionCount; <span class="comment">// 라인 렌더러의 끝점 개수를 추가</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                _line.SetPosition(_line.positionCount - 1, hit.point); <span class="comment">// 라인 렌더러의 끝점을 충돌 지점으로 설정</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                <span class="comment">// 레이 캐스트가 물체에 닿았다면, 반사 방향 설정</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                _direction = Vector3.Reflect(_direction, <span class="keyword">new</span> Vector3(hit.normal.x, 0, hit.normal.z).normalized);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                _startPos = hit.point; <span class="comment">// 시작 지점을 충돌 지점으로 변경</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                ++_line.positionCount; <span class="comment">// 라인 렌더러의 끝점 개수를 추가</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                _line.SetPosition(_line.positionCount - 1,</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    _startPos + _direction * distance); <span class="comment">// 라인 렌더러의 끝점을 최대 거리 지점으로 설정</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                <span class="keywordflow">break</span>; <span class="comment">// 레이 캐스트가 아무것도 충돌하지 않았으면 반복 종료</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            var rays = Physics.RaycastAll(_startPos, _direction, distance);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordtype">bool</span> isHit = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">foreach</span> (RaycastHit hit <span class="keywordflow">in</span> rays)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <span class="keywordflow">if</span> (hit.collider.CompareTag(<span class="stringliteral">&quot;Player&quot;</span>) != <span class="keyword">false</span> ||</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    hit.collider.isTrigger)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                isHit = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                ++_line.positionCount; <span class="comment">// 라인 렌더러의 끝점 개수를 추가</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                _line.SetPosition(_line.positionCount - 1, hit.point); <span class="comment">// 라인 렌더러의 끝점을 충돌 지점으로 설정</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <span class="comment">// 레이 캐스트가 물체에 닿았다면, 반사 방향 설정</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                _direction = Vector3.Reflect(_direction, <span class="keyword">new</span> Vector3(hit.normal.x, 0, hit.normal.z).normalized);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                _startPos = hit.point; <span class="comment">// 시작 지점을 충돌 지점으로 변경</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        _elapsedTime += Time.deltaTime;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">if</span> (isHit) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="comment">// 만약 충돌이 일어나지 않았다면</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            ++_line.positionCount; <span class="comment">// 라인 렌더러의 끝점 개수를 추가</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            _line.SetPosition(_line.positionCount - 1,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                _startPos + _direction * distance); <span class="comment">// 라인 렌더러의 끝점을 최대 거리 지점으로 설정</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">break</span>; <span class="comment">// 레이 캐스트가 아무것도 충돌하지 않았으면 반복 종료</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        _elapsedTime += Time.deltaTime;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
 <div class="ttc" id="aclass_fundeal_1_1_framework_1_1_action_html"><div class="ttname"><a href="../../dd/d65/class_fundeal_1_1_framework_1_1_action.html">Fundeal.Framework.Action</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0b/_action_8cs_source.html#l00007">Action.cs:8</a></div></div>
 <div class="ttc" id="aclass_player_controller_html"><div class="ttname"><a href="../../dc/dde/class_player_controller.html">PlayerController</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00006">PlayerController.cs:7</a></div></div>
 <div class="ttc" id="aclass_player_raycast_action_html"><div class="ttname"><a href="../../d1/d0f/class_player_raycast_action.html">PlayerRaycastAction</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d58/_player_raycast_action_8cs_source.html#l00007">PlayerRaycastAction.cs:8</a></div></div>
@@ -191,7 +199,7 @@ $(document).ready(function(){initNavTree('da/d58/_player_raycast_action_8cs_sour
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d553aaab78a1d92bbbc5f77218f1f15a.html">PnA</a></li><li class="navelem"><a class="el" href="../../dir_93846d1da70b556cf1f7ae3fce66d9d5.html">Action</a></li><li class="navelem"><b>PlayerRaycastAction.cs</b></li>
-    <li class="footer">생성시간 : 화 6월 13 2023 00:45:40, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 수 6월 14 2023 00:43:14, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>
