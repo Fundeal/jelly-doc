@@ -122,8 +122,10 @@ Public 멤버 함수</h2></td></tr>
 <tr class="separator:af25b57ef4a9225ff3712eb0d714b356b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c106fcc293ef91cef08a3c85ed06a94"><td class="memItemLeft" align="right" valign="top">virtual List&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a8c106fcc293ef91cef08a3c85ed06a94">GetActions&lt; T &gt;</a> ()</td></tr>
 <tr class="separator:a8c106fcc293ef91cef08a3c85ed06a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae08256e74232aa9baec8fb4296be7960"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#ae08256e74232aa9baec8fb4296be7960">OnHit</a> (<a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a> other, Collision collision)</td></tr>
-<tr class="separator:ae08256e74232aa9baec8fb4296be7960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24d7c6bc082e0d76b7a04ea6df22acfe"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html">PrepareBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a24d7c6bc082e0d76b7a04ea6df22acfe">GetPrepare</a> (string name)</td></tr>
+<tr class="separator:a24d7c6bc082e0d76b7a04ea6df22acfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a219e47cb79b5ac27b42a54bdbc918efa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a219e47cb79b5ac27b42a54bdbc918efa">OnHit</a> (<a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a> other, Collider collider)</td></tr>
+<tr class="separator:a219e47cb79b5ac27b42a54bdbc918efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected 속성</h2></td></tr>
@@ -226,8 +228,45 @@ Protected 속성</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ae08256e74232aa9baec8fb4296be7960" name="ae08256e74232aa9baec8fb4296be7960"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae08256e74232aa9baec8fb4296be7960">&#9670;&#160;</a></span>OnHit()</h2>
+<a id="a24d7c6bc082e0d76b7a04ea6df22acfe" name="a24d7c6bc082e0d76b7a04ea6df22acfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d7c6bc082e0d76b7a04ea6df22acfe">&#9670;&#160;</a></span>GetPrepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html">PrepareBase</a> Fundeal.Framework.BaseController.GetPrepare </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d1/da6/_base_controller_8cs_source.html">BaseController.cs</a> 파일의 <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00086">86</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">foreach</span> (var system <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a95fb1855ebcb53dbbb44e3f9f56f98e8">_layers</a>)</div>
+<div class="line"><span class="lineno">   89</span>            {</div>
+<div class="line"><span class="lineno">   90</span>                var prepare = system.GetPrepare(name);</div>
+<div class="line"><span class="lineno">   91</span>                <span class="keywordflow">if</span> (prepare != <span class="keyword">null</span>) <span class="keywordflow">return</span> prepare;</div>
+<div class="line"><span class="lineno">   92</span>            }</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a219e47cb79b5ac27b42a54bdbc918efa" name="a219e47cb79b5ac27b42a54bdbc918efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a219e47cb79b5ac27b42a54bdbc918efa">&#9670;&#160;</a></span>OnHit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,8 +283,8 @@ Protected 속성</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Collision&#160;</td>
-          <td class="paramname"><em>collision</em>&#160;</td>
+          <td class="paramtype">Collider&#160;</td>
+          <td class="paramname"><em>collider</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -260,13 +299,13 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d1/da6/_base_controller_8cs_source.html">BaseController.cs</a> 파일의 <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00086">86</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>        {</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">foreach</span> (var system <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a95fb1855ebcb53dbbb44e3f9f56f98e8">_layers</a>)</div>
-<div class="line"><span class="lineno">   89</span>            {</div>
-<div class="line"><span class="lineno">   90</span>                system.OnHit(other, collision);</div>
-<div class="line"><span class="lineno">   91</span>            }</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
+<p class="definition"><a class="el" href="../../d1/da6/_base_controller_8cs_source.html">BaseController.cs</a> 파일의 <a class="el" href="../../d1/da6/_base_controller_8cs_source.html#l00097">97</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>        {</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">foreach</span> (var system <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a95fb1855ebcb53dbbb44e3f9f56f98e8">_layers</a>)</div>
+<div class="line"><span class="lineno">  100</span>            {</div>
+<div class="line"><span class="lineno">  101</span>                system.OnHit(other, collider);</div>
+<div class="line"><span class="lineno">  102</span>            }</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -424,7 +463,7 @@ Protected 속성</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/d7d/namespace_fundeal.html">Fundeal</a></li><li class="navelem"><a class="el" href="../../d2/d28/namespace_fundeal_1_1_framework.html">Framework</a></li><li class="navelem"><a class="el" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html">BaseController</a></li>
-    <li class="footer">생성시간 : 금 7월 14 2023 00:52:00, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 토 7월 15 2023 00:50:41, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

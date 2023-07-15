@@ -187,16 +187,18 @@ Protected 멤버 함수</h2></td></tr>
 
 <p class="definition"><a class="el" href="../../df/df4/_game_system_8cs_source.html">GameSystem.cs</a> 파일의 <a class="el" href="../../df/df4/_game_system_8cs_source.html#l00010">10</a> 번째 라인에서 정의되었습니다.</p>
 <div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">if</span> (Instance != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   13</span>        {</div>
-<div class="line"><span class="lineno">   14</span>            Destroy(gameObject);</div>
-<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   16</span>        }</div>
-<div class="line"><span class="lineno">   17</span> </div>
-<div class="line"><span class="lineno">   18</span>        Instance = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   19</span>        DontDestroyOnLoad(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   20</span>        base.Awake();</div>
-<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="line"><span class="lineno">   12</span>        Application.targetFrameRate = 60;</div>
+<div class="line"><span class="lineno">   13</span> </div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">if</span> (Instance != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            Destroy(gameObject);</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span> </div>
+<div class="line"><span class="lineno">   20</span>        Instance = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   21</span>        DontDestroyOnLoad(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   22</span>        base.Awake();</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -273,7 +275,7 @@ Protected 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/dce/class_game_system.html">GameSystem</a></li>
-    <li class="footer">생성시간 : 금 7월 14 2023 00:52:00, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 토 7월 15 2023 00:50:40, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

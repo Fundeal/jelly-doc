@@ -10,13 +10,17 @@ var annotated_dup =
         [ "InspectorCSVLoader", "d9/dab/class_fundeal_1_1_framework_1_1_inspector_c_s_v_loader.html", null ],
         [ "InspectorLoader", "d4/d2f/class_fundeal_1_1_framework_1_1_inspector_loader.html", null ],
         [ "InspectorPrefabLoader", "d3/db3/class_fundeal_1_1_framework_1_1_inspector_prefab_loader.html", null ],
+        [ "IStatBase", "de/d8f/interface_fundeal_1_1_framework_1_1_i_stat_base.html", null ],
         [ "ObjectPoolSystem", "d5/dd8/class_fundeal_1_1_framework_1_1_object_pool_system.html", null ],
         [ "PrepareAlwaysSystem", "d2/d6a/class_fundeal_1_1_framework_1_1_prepare_always_system.html", "d2/d6a/class_fundeal_1_1_framework_1_1_prepare_always_system" ],
         [ "PrepareBase", "d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html", "d7/d00/class_fundeal_1_1_framework_1_1_prepare_base" ],
         [ "PrepareFSMSystem", "db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system.html", "db/d07/class_fundeal_1_1_framework_1_1_prepare_f_s_m_system" ],
-        [ "PrepareSystem", "d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html", "d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system" ]
+        [ "PrepareSystem", "d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html", "d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system" ],
+        [ "StatSystem", "d3/d39/class_fundeal_1_1_framework_1_1_stat_system.html", null ]
       ] ]
     ] ],
+    [ "AttackAction", "d4/dbb/class_attack_action.html", null ],
+    [ "BounceAction", "d6/de4/class_bounce_action.html", null ],
     [ "CameraFixer", "de/dcb/class_camera_fixer.html", null ],
     [ "CameraTracer", "db/d34/class_camera_tracer.html", null ],
     [ "DungeonCompleteState", "dd/dca/class_dungeon_complete_state.html", "dd/dca/class_dungeon_complete_state" ],
@@ -29,12 +33,16 @@ var annotated_dup =
     [ "DungeonUIViewer", "d5/d01/class_dungeon_u_i_viewer.html", null ],
     [ "EmptyAction", "d7/d1b/class_empty_action.html", null ],
     [ "GameSystem", "d6/dce/class_game_system.html", null ],
+    [ "HitAction", "d5/dfe/class_hit_action.html", null ],
+    [ "IDungeonBinder", "df/df6/interface_i_dungeon_binder.html", null ],
     [ "IngameMainSystem", "d5/dcc/class_ingame_main_system.html", null ],
     [ "InspectorFSMBase", "db/d6e/class_inspector_f_s_m_base.html", "db/d6e/class_inspector_f_s_m_base" ],
     [ "InspectorFSMBaseInterface", "df/df4/interface_inspector_f_s_m_base_interface.html", null ],
     [ "InspectorFSMInterface", "dc/d15/interface_inspector_f_s_m_interface.html", null ],
     [ "InspectorFSMSystem", "d3/d62/class_inspector_f_s_m_system.html", "d3/d62/class_inspector_f_s_m_system" ],
     [ "LoadResourcesSystem", "df/d21/class_load_resources_system.html", null ],
+    [ "LobbyGameObjectAttractor", "d8/dbe/class_lobby_game_object_attractor.html", null ],
+    [ "MonsterActor", "db/d4a/class_monster_actor.html", null ],
     [ "MonsterPool", "dd/d6e/class_monster_pool.html", null ],
     [ "MonsterSpawner", "d8/d3d/class_monster_spawner.html", "d8/d3d/class_monster_spawner" ],
     [ "NormalDungeon", "dc/db2/class_normal_dungeon.html", null ],
@@ -43,6 +51,7 @@ var annotated_dup =
     [ "PlayerMovementAction", "d0/deb/class_player_movement_action.html", null ],
     [ "PlayerRaycastAction", "d1/d0f/class_player_raycast_action.html", null ],
     [ "PrepareAlways", "d6/d7f/class_prepare_always.html", "d6/d7f/class_prepare_always" ],
+    [ "PrepareAttack", "d7/da3/class_prepare_attack.html", "d7/da3/class_prepare_attack" ],
     [ "PrepareDuration", "d6/d62/class_prepare_duration.html", "d6/d62/class_prepare_duration" ],
     [ "PrepareRandDuration", "d5/d0a/class_prepare_rand_duration.html", "d5/d0a/class_prepare_rand_duration" ],
     [ "PrepareTouchInput", "da/d01/class_prepare_touch_input.html", "da/d01/class_prepare_touch_input" ],
@@ -50,5 +59,6 @@ var annotated_dup =
     [ "SystemBase", "d6/d53/interface_system_base.html", null ],
     [ "SystemPool", "dc/d66/class_system_pool.html", null ],
     [ "TestActor", "d0/d1a/class_test_actor.html", null ],
-    [ "TurningAction", "de/d9d/class_turning_action.html", null ]
+    [ "TurningAction", "de/d9d/class_turning_action.html", null ],
+    [ "WallActor", "d4/d8c/class_wall_actor.html", null ]
 ];

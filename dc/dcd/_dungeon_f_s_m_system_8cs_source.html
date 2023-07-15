@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('dc/dcd/_dungeon_f_s_m_system_8cs_sourc
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>UnityEngine.Events;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../df/daf/class_dungeon_f_s_m_system.html">    9</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../df/daf/class_dungeon_f_s_m_system.html">DungeonFSMSystem</a> : <a class="code hl_class" href="../../d3/d62/class_inspector_f_s_m_system.html">InspectorFSMSystem</a>&lt;DungeonFSMSystem.State, DungeonStateBase&gt;, <a class="code hl_interface" href="../../d6/d53/interface_system_base.html">SystemBase</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../df/daf/class_dungeon_f_s_m_system.html">    9</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../df/daf/class_dungeon_f_s_m_system.html">DungeonFSMSystem</a> : <a class="code hl_class" href="../../d3/d62/class_inspector_f_s_m_system.html">InspectorFSMSystem</a>&lt;DungeonFSMSystem.State, DungeonStateBase&gt;, <a class="code hl_interface" href="../../d6/d53/interface_system_base.html">SystemBase</a>, <a class="code hl_interface" href="../../df/df6/interface_i_dungeon_binder.html">IDungeonBinder</a></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    [Serializable]</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d1/df2/class_dungeon_f_s_m_system_1_1_dungeon_info.html">   12</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d1/df2/class_dungeon_f_s_m_system_1_1_dungeon_info.html">DungeonInfo</a></div>
@@ -156,7 +156,7 @@ $(document).ready(function(){initNavTree('dc/dcd/_dungeon_f_s_m_system_8cs_sourc
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// Update is called once per frame</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> Update()</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Update()</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
@@ -239,6 +239,7 @@ $(document).ready(function(){initNavTree('dc/dcd/_dungeon_f_s_m_system_8cs_sourc
 <div class="ttc" id="aclass_fundeal_1_1_framework_1_1_inspector_prefab_loader_html"><div class="ttname"><a href="../../d3/db3/class_fundeal_1_1_framework_1_1_inspector_prefab_loader.html">Fundeal.Framework.InspectorPrefabLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da7/_inspector_prefab_loader_8cs_source.html#l00012">InspectorPrefabLoader.cs:13</a></div></div>
 <div class="ttc" id="aclass_inspector_f_s_m_system_html"><div class="ttname"><a href="../../d3/d62/class_inspector_f_s_m_system.html">InspectorFSMSystem</a></div><div class="ttdoc">Inspector�??�용??FSM System ?�래?�입?�다. ?�당 ?�래?��? ?�속받아 FSM System??커스?�?�시�??�니??</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_inspector_f_s_m_system_8cs_source.html#l00021">InspectorFSMSystem.cs:24</a></div></div>
 <div class="ttc" id="aclass_inspector_f_s_m_system_html_abc30da056d95c0b61d6602ded2b462f4"><div class="ttname"><a href="../../d3/d62/class_inspector_f_s_m_system.html#abc30da056d95c0b61d6602ded2b462f4">InspectorFSMSystem&lt; DungeonFSMSystem.State, DungeonStateBase &gt;::ChangeState</a></div><div class="ttdeci">virtual void ChangeState(TStateEnum state)</div><div class="ttdoc">?�당 FSM ?�스?�의 State�?바꿉?�다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_inspector_f_s_m_system_8cs_source.html#l00047">InspectorFSMSystem.cs:47</a></div></div>
+<div class="ttc" id="ainterface_i_dungeon_binder_html"><div class="ttname"><a href="../../df/df6/interface_i_dungeon_binder.html">IDungeonBinder</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd6/_i_dungeon_binder_8cs_source.html#l00006">IDungeonBinder.cs:7</a></div></div>
 <div class="ttc" id="ainterface_system_base_html"><div class="ttname"><a href="../../d6/d53/interface_system_base.html">SystemBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/de9/_system_base_8cs_source.html#l00005">SystemBase.cs:6</a></div></div>
 <div class="ttc" id="anamespace_fundeal_1_1_framework_html"><div class="ttname"><a href="../../d2/d28/namespace_fundeal_1_1_framework.html">Fundeal.Framework</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0b/_action_8cs_source.html#l00005">Action.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -247,7 +248,7 @@ $(document).ready(function(){initNavTree('dc/dcd/_dungeon_f_s_m_system_8cs_sourc
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9ad677904ed6b99c9ed539e667953d7e.html">Dungeon</a></li><li class="navelem"><a class="el" href="../../dir_45a2ab488923aafdfae1b18511d68f56.html">System</a></li><li class="navelem"><b>DungeonFSMSystem.cs</b></li>
-    <li class="footer">생성시간 : 금 7월 14 2023 00:51:59, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 토 7월 15 2023 00:50:40, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

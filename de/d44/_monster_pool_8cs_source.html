@@ -100,32 +100,55 @@ $(document).ready(function(){initNavTree('de/d44/_monster_pool_8cs_source.html',
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../dd/d6e/class_monster_pool.html">    6</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../dd/d6e/class_monster_pool.html">MonsterPool</a> : <a class="code hl_class" href="../../d5/dd8/class_fundeal_1_1_framework_1_1_object_pool_system.html">ObjectPoolSystem</a>&lt;Actor&gt;, <a class="code hl_interface" href="../../d6/d53/interface_system_base.html">SystemBase</a></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> _isLoaded = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="comment">// Start is called before the first frame update</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> OnSystemLoaded() {}</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> IsLoaded() =&gt; _isLoaded;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> InitPrefabPool(<a class="code hl_class" href="../../d3/db3/class_fundeal_1_1_framework_1_1_inspector_prefab_loader.html">InspectorPrefabLoader</a> loader)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">foreach</span> (var prefab <span class="keywordflow">in</span> loader.Result)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            var actor = prefab.GetComponent&lt;<a class="code hl_class" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a>&gt;();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">if</span> (actor == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            _prefabPool.Add(prefab.name, actor);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            _pool.Add(prefab.name, <span class="keyword">new</span> List&lt;Actor&gt;());</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            _active.Add(prefab.name, <span class="keyword">new</span> List&lt;Actor&gt;());</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        _isLoaded = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
-<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_actor_html"><div class="ttname"><a href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Fundeal.Framework.Actor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d68/_actor_8cs_source.html#l00008">Actor.cs:9</a></div></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">public</span> <span class="keywordtype">int</span> ActiveCount { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">// Start is called before the first frame update</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_class" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a> Get(<span class="keywordtype">string</span> name)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        ++ActiveCount;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        var result = base.Get(name);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        result.StatSystemComponent.ResetStats();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        var rigid = result.GetComponent&lt;Rigidbody&gt;();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        rigid.velocity = Vector3.zero;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Remove(<a class="code hl_class" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a> obj)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        --ActiveCount;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        base.Remove(obj);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> RemoveAll()</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        ActiveCount = 0;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        base.RemoveAll();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> OnSystemLoaded() {}</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> IsLoaded() =&gt; _isLoaded;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> InitPrefabPool(<a class="code hl_class" href="../../d3/db3/class_fundeal_1_1_framework_1_1_inspector_prefab_loader.html">InspectorPrefabLoader</a> loader)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">foreach</span> (var prefab <span class="keywordflow">in</span> loader.Result)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            var actor = prefab.GetComponent&lt;<a class="code hl_class" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a>&gt;();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">if</span> (actor == <span class="keyword">null</span>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            _prefabPool.Add(prefab.name, actor);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            _pool.Add(prefab.name, <span class="keyword">new</span> List&lt;Actor&gt;());</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            _active.Add(prefab.name, <span class="keyword">new</span> List&lt;Actor&gt;());</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        _isLoaded = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_actor_html"><div class="ttname"><a href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Fundeal.Framework.Actor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d68/_actor_8cs_source.html#l00009">Actor.cs:10</a></div></div>
 <div class="ttc" id="aclass_fundeal_1_1_framework_1_1_inspector_prefab_loader_html"><div class="ttname"><a href="../../d3/db3/class_fundeal_1_1_framework_1_1_inspector_prefab_loader.html">Fundeal.Framework.InspectorPrefabLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da7/_inspector_prefab_loader_8cs_source.html#l00012">InspectorPrefabLoader.cs:13</a></div></div>
 <div class="ttc" id="aclass_fundeal_1_1_framework_1_1_object_pool_system_html"><div class="ttname"><a href="../../d5/dd8/class_fundeal_1_1_framework_1_1_object_pool_system.html">Fundeal.Framework.ObjectPoolSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d42/_object_pool_system_8cs_source.html#l00007">ObjectPoolSystem.cs:9</a></div></div>
 <div class="ttc" id="aclass_monster_pool_html"><div class="ttname"><a href="../../dd/d6e/class_monster_pool.html">MonsterPool</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d44/_monster_pool_8cs_source.html#l00006">MonsterPool.cs:7</a></div></div>
@@ -137,7 +160,7 @@ $(document).ready(function(){initNavTree('de/d44/_monster_pool_8cs_source.html',
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_4f3b68dc77c6199308398c9d552a8742.html">Actor</a></li><li class="navelem"><a class="el" href="../../dir_aa07fb7e154dfdf5c12ebfd66662b853.html">System</a></li><li class="navelem"><b>MonsterPool.cs</b></li>
-    <li class="footer">생성시간 : 금 7월 14 2023 00:51:59, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 토 7월 15 2023 00:50:40, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

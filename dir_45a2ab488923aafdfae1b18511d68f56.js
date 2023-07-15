@@ -6,5 +6,6 @@ var dir_45a2ab488923aafdfae1b18511d68f56 =
     [ "DungeonInState.cs", "d4/d9a/_dungeon_in_state_8cs_source.html", null ],
     [ "DungeonLoadingState.cs", "dd/dbd/_dungeon_loading_state_8cs_source.html", null ],
     [ "DungeonPool.cs", "da/da3/_dungeon_pool_8cs_source.html", null ],
-    [ "DungeonStateBase.cs", "d6/d2f/_dungeon_state_base_8cs_source.html", null ]
+    [ "DungeonStateBase.cs", "d6/d2f/_dungeon_state_base_8cs_source.html", null ],
+    [ "IDungeonBinder.cs", "d4/dd6/_i_dungeon_binder_8cs_source.html", null ]
 ];

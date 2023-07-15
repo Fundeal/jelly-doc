@@ -104,7 +104,9 @@ Fundeal.Framework.Actor에 대한 상속 다이어그램 : </div>
  <div class="center">
   <img src="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.png" usemap="#Fundeal.Framework.Actor_map" alt=""/>
   <map id="Fundeal.Framework.Actor_map" name="Fundeal.Framework.Actor_map">
-<area href="../../d0/d1a/class_test_actor.html" alt="TestActor" shape="rect" coords="0,112,160,136"/>
+<area href="../../db/d4a/class_monster_actor.html" alt="MonsterActor" shape="rect" coords="0,112,160,136"/>
+<area href="../../d0/d1a/class_test_actor.html" alt="TestActor" shape="rect" coords="170,112,330,136"/>
+<area href="../../d4/d8c/class_wall_actor.html" alt="WallActor" shape="rect" coords="340,112,500,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -114,9 +116,17 @@ Public 멤버 함수</h2></td></tr>
 <tr class="separator:a3488f0e4c6d2ffcd5364860009e47753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1be0871c5db4bd54226e72c10b36a05f"><td class="memItemLeft" align="right" valign="top">List&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html#a1be0871c5db4bd54226e72c10b36a05f">GetActions&lt; T &gt;</a> ()</td></tr>
 <tr class="separator:a1be0871c5db4bd54226e72c10b36a05f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56182a29bec62e720029dbc4e0151ea8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html">PrepareBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html#a56182a29bec62e720029dbc4e0151ea8">GetPrepare</a> (string name)</td></tr>
+<tr class="separator:a56182a29bec62e720029dbc4e0151ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeebc288312b83e73f14e238abe664b93"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html#aeebc288312b83e73f14e238abe664b93">Exterminate</a> ()</td></tr>
+<tr class="separator:aeebc288312b83e73f14e238abe664b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
+<tr class="memitem:a23227e7ee61b862d3f0988e4f925f644"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html#a23227e7ee61b862d3f0988e4f925f644">Awake</a> ()</td></tr>
+<tr class="separator:a23227e7ee61b862d3f0988e4f925f644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa33e0ecef1fac239bae741168dfe79b7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html#aa33e0ecef1fac239bae741168dfe79b7">OnDestroy</a> ()</td></tr>
+<tr class="separator:aa33e0ecef1fac239bae741168dfe79b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a997897a3f0249b7f5c986ddd957a13da"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html#a997897a3f0249b7f5c986ddd957a13da">Update</a> ()</td></tr>
 <tr class="separator:a997897a3f0249b7f5c986ddd957a13da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -126,16 +136,85 @@ Protected 속성</h2></td></tr>
 <tr class="separator:a11f5a36c1e30c1852101504778e91435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad026601900e52dfacdb963dadebdad43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dac/class_fundeal_1_1_framework_1_1_hit_system.html">HitSystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html#ad026601900e52dfacdb963dadebdad43">_hitSystem</a> = null</td></tr>
 <tr class="separator:ad026601900e52dfacdb963dadebdad43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d387216185bbf34cc7a41178da72c6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d39/class_fundeal_1_1_framework_1_1_stat_system.html">StatSystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html#a3d387216185bbf34cc7a41178da72c6a">_statSystem</a> = null</td></tr>
+<tr class="separator:a3d387216185bbf34cc7a41178da72c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 속성</h2></td></tr>
 <tr class="memitem:a6242bb75932ab877b9562d5a13bd67dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dac/class_fundeal_1_1_framework_1_1_hit_system.html">HitSystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html#a6242bb75932ab877b9562d5a13bd67dc">HitSystemComponent</a><code> [get]</code></td></tr>
 <tr class="separator:a6242bb75932ab877b9562d5a13bd67dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b835e557657c38fe4b2f73ddc46951f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d39/class_fundeal_1_1_framework_1_1_stat_system.html">StatSystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html#a5b835e557657c38fe4b2f73ddc46951f">StatSystemComponent</a><code> [get]</code></td></tr>
+<tr class="separator:a5b835e557657c38fe4b2f73ddc46951f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock">
-<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00008">8</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00009">9</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a23227e7ee61b862d3f0988e4f925f644" name="a23227e7ee61b862d3f0988e4f925f644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23227e7ee61b862d3f0988e4f925f644">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Fundeal.Framework.Actor.Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            _controller ??= GetComponent&lt;BaseController&gt;();</div>
+<div class="line"><span class="lineno">   40</span>            _controller.<a class="code hl_function" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#aacc0a8ca47d450d1cdd3defed5dc9952">Register</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   41</span>            _hitSystem ??= GetComponent&lt;HitSystem&gt;();</div>
+<div class="line"><span class="lineno">   42</span>            _hitSystem.OnHitEvent += _controller.OnHit;</div>
+<div class="line"><span class="lineno">   43</span>            _statSystem ??= GetComponent&lt;StatSystem&gt;();</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="ttc" id="aclass_fundeal_1_1_framework_1_1_base_controller_html_aacc0a8ca47d450d1cdd3defed5dc9952"><div class="ttname"><a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#aacc0a8ca47d450d1cdd3defed5dc9952">Fundeal.Framework.BaseController.Register</a></div><div class="ttdeci">virtual void Register(Actor actor)</div><div class="ttdoc">액터에 해당 컨트롤러를 등록하는 함수입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/_base_controller_8cs_source.html#l00039">BaseController.cs:39</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeebc288312b83e73f14e238abe664b93" name="aeebc288312b83e73f14e238abe664b93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeebc288312b83e73f14e238abe664b93">&#9670;&#160;</a></span>Exterminate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Fundeal.Framework.Actor.Exterminate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00052">52</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a1be0871c5db4bd54226e72c10b36a05f" name="a1be0871c5db4bd54226e72c10b36a05f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1be0871c5db4bd54226e72c10b36a05f">&#9670;&#160;</a></span>GetActions&lt; T &gt;()</h2>
 
@@ -167,11 +246,11 @@ Protected 속성</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00022">22</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                               : Action</div>
-<div class="line"><span class="lineno">   23</span>        {</div>
-<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span> _controller.GetActions&lt;T&gt;();</div>
-<div class="line"><span class="lineno">   25</span>        }</div>
+<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00027">27</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>                                               : Action</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> _controller.GetActions&lt;T&gt;();</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -206,11 +285,72 @@ Protected 속성</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>                                            : BaseController</div>
-<div class="line"><span class="lineno">   18</span>        {</div>
-<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> _controller as T;</div>
-<div class="line"><span class="lineno">   20</span>        }</div>
+<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00022">22</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>                                            : BaseController</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span> _controller as T;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a56182a29bec62e720029dbc4e0151ea8" name="a56182a29bec62e720029dbc4e0151ea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56182a29bec62e720029dbc4e0151ea8">&#9670;&#160;</a></span>GetPrepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html">PrepareBase</a> Fundeal.Framework.Actor.GetPrepare </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00032">32</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> _controller.GetPrepare(name);</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa33e0ecef1fac239bae741168dfe79b7" name="aa33e0ecef1fac239bae741168dfe79b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa33e0ecef1fac239bae741168dfe79b7">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Fundeal.Framework.Actor.OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            _hitSystem.OnHitEvent -= _controller.OnHit;</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -237,10 +377,11 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00047">47</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>        {</div>
-<div class="line"><span class="lineno">   49</span>            _controller?.<a class="code hl_function" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a7893c4dc4cc999516c9137e5ee775b00">UpdateController</a>();</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
+<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00063">63</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            _controller?.<a class="code hl_function" href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a7893c4dc4cc999516c9137e5ee775b00">UpdateController</a>();</div>
+<div class="line"><span class="lineno">   66</span>            _statSystem.StatsUpdate();</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
 <div class="ttc" id="aclass_fundeal_1_1_framework_1_1_base_controller_html_a7893c4dc4cc999516c9137e5ee775b00"><div class="ttname"><a href="../../d8/d8f/class_fundeal_1_1_framework_1_1_base_controller.html#a7893c4dc4cc999516c9137e5ee775b00">Fundeal.Framework.BaseController.UpdateController</a></div><div class="ttdeci">virtual void UpdateController()</div><div class="ttdoc">컨트롤러에 종속된 모든 Update를 담당하는 함수입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da6/_base_controller_8cs_source.html#l00052">BaseController.cs:52</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -266,7 +407,7 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00011">11</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -290,7 +431,31 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00014">14</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3d387216185bbf34cc7a41178da72c6a" name="a3d387216185bbf34cc7a41178da72c6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d387216185bbf34cc7a41178da72c6a">&#9670;&#160;</a></span>_statSystem</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d39/class_fundeal_1_1_framework_1_1_stat_system.html">StatSystem</a> Fundeal.Framework.Actor._statSystem = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00019">19</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -315,7 +480,31 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00016">16</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5b835e557657c38fe4b2f73ddc46951f" name="a5b835e557657c38fe4b2f73ddc46951f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b835e557657c38fe4b2f73ddc46951f">&#9670;&#160;</a></span>StatSystemComponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d39/class_fundeal_1_1_framework_1_1_stat_system.html">StatSystem</a> Fundeal.Framework.Actor.StatSystemComponent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d7/d68/_actor_8cs_source.html">Actor.cs</a> 파일의 <a class="el" href="../../d7/d68/_actor_8cs_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -328,7 +517,7 @@ Protected 속성</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/d7d/namespace_fundeal.html">Fundeal</a></li><li class="navelem"><a class="el" href="../../d2/d28/namespace_fundeal_1_1_framework.html">Framework</a></li><li class="navelem"><a class="el" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a></li>
-    <li class="footer">생성시간 : 금 7월 14 2023 00:52:00, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 토 7월 15 2023 00:50:41, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

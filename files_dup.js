@@ -6,6 +6,7 @@ var files_dup =
     [ "Core", "dir_c6310732a22f63c0c2fc5595561e68f1.html", "dir_c6310732a22f63c0c2fc5595561e68f1" ],
     [ "Dungeon", "dir_9ad677904ed6b99c9ed539e667953d7e.html", "dir_9ad677904ed6b99c9ed539e667953d7e" ],
     [ "Framework", "dir_bcbb2cf9a3d3d83e5515c82071a07177.html", "dir_bcbb2cf9a3d3d83e5515c82071a07177" ],
+    [ "LobbyUtil", "dir_6454c24037e9c91ead47e7fbe6809b80.html", "dir_6454c24037e9c91ead47e7fbe6809b80" ],
     [ "PnA", "dir_d553aaab78a1d92bbbc5f77218f1f15a.html", "dir_d553aaab78a1d92bbbc5f77218f1f15a" ],
     [ "Test", "dir_37618a71d99bdfed5979e976980d5eec.html", "dir_37618a71d99bdfed5979e976980d5eec" ]
 ];
