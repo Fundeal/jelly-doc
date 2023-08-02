@@ -106,11 +106,45 @@ CameraFixer에 대한 상속 다이어그램 : </div>
 Public 멤버 함수</h2></td></tr>
 <tr class="memitem:a48870c8365a2414a474a04a3ca4e8034"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dcb/class_camera_fixer.html#a48870c8365a2414a474a04a3ca4e8034">Init</a> ()</td></tr>
 <tr class="separator:a48870c8365a2414a474a04a3ca4e8034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5412d6a6dfd1bdf0f8028db68e1f62db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dcb/class_camera_fixer.html#a5412d6a6dfd1bdf0f8028db68e1f62db">ChangeCameraPadding</a> ()</td></tr>
+<tr class="separator:a5412d6a6dfd1bdf0f8028db68e1f62db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock">
 <p class="definition"><a class="el" href="../../dc/dfe/_camera_fixer_8cs_source.html">CameraFixer.cs</a> 파일의 <a class="el" href="../../dc/dfe/_camera_fixer_8cs_source.html#l00006">6</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a5412d6a6dfd1bdf0f8028db68e1f62db" name="a5412d6a6dfd1bdf0f8028db68e1f62db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5412d6a6dfd1bdf0f8028db68e1f62db">&#9670;&#160;</a></span>ChangeCameraPadding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraFixer.ChangeCameraPadding </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../dc/dfe/_camera_fixer_8cs_source.html">CameraFixer.cs</a> 파일의 <a class="el" href="../../dc/dfe/_camera_fixer_8cs_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        var dungeon = _dungeonSystem.CurDungeonInstance as <a class="code hl_class" href="../../dc/db2/class_normal_dungeon.html">NormalDungeon</a>;</div>
+<div class="line"><span class="lineno">   42</span>        _resultSize = dungeon?.SetCameraSize(_camera) ?? 20.0f;</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aclass_normal_dungeon_html"><div class="ttname"><a href="../../dc/db2/class_normal_dungeon.html">NormalDungeon</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dc8/_normal_dungeon_8cs_source.html#l00010">NormalDungeon.cs:11</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a48870c8365a2414a474a04a3ca4e8034" name="a48870c8365a2414a474a04a3ca4e8034"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48870c8365a2414a474a04a3ca4e8034">&#9670;&#160;</a></span>Init()</h2>
 
@@ -134,18 +168,17 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../dc/dfe/_camera_fixer_8cs_source.html">CameraFixer.cs</a> 파일의 <a class="el" href="../../dc/dfe/_camera_fixer_8cs_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
-<div class="line"><span class="lineno">   25</span>        var dungeon = _dungeonSystem.CurDungeonInstance as <a class="code hl_class" href="../../dc/db2/class_normal_dungeon.html">NormalDungeon</a>;</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordtype">float</span> sd = _camera.transform.localPosition.z;</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordtype">float</span> f = (_camera.fieldOfView * 0.5f) * (Mathf.PI / 180.0f);</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordtype">float</span> dt = Mathf.Tan(f) * sd;</div>
-<div class="line"><span class="lineno">   29</span>        dt *= _camera.aspect;</div>
-<div class="line"><span class="lineno">   30</span>        dt += _spaceOffset;</div>
-<div class="line"><span class="lineno">   31</span> </div>
-<div class="line"><span class="lineno">   32</span>        _resultZ = -sd * (dungeon.DungeonArea.size.x * 0.5f) / dt;</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
-<div class="ttc" id="aclass_normal_dungeon_html"><div class="ttname"><a href="../../dc/db2/class_normal_dungeon.html">NormalDungeon</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dc8/_normal_dungeon_8cs_source.html#l00010">NormalDungeon.cs:11</a></div></div>
+<p class="definition"><a class="el" href="../../dc/dfe/_camera_fixer_8cs_source.html">CameraFixer.cs</a> 파일의 <a class="el" href="../../dc/dfe/_camera_fixer_8cs_source.html#l00022">22</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="comment">// var dungeon = _dungeonSystem.CurDungeonInstance as NormalDungeon;</span></div>
+<div class="line"><span class="lineno">   25</span>        <span class="comment">// float sd = _camera.transform.localPosition.z;</span></div>
+<div class="line"><span class="lineno">   26</span>        <span class="comment">// float f = (_camera.fieldOfView * 0.5f) * (Mathf.PI / 180.0f);</span></div>
+<div class="line"><span class="lineno">   27</span>        <span class="comment">// float dt = Mathf.Tan(f) * sd;</span></div>
+<div class="line"><span class="lineno">   28</span>        <span class="comment">// dt *= _camera.aspect;</span></div>
+<div class="line"><span class="lineno">   29</span>        <span class="comment">// dt += _spaceOffset;</span></div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>        ChangeCameraPadding();</div>
+<div class="line"><span class="lineno">   32</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -158,7 +191,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../de/dcb/class_camera_fixer.html">CameraFixer</a></li>
-    <li class="footer">생성시간 : 화 8월 1 2023 00:47:36, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 수 8월 2 2023 00:41:37, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

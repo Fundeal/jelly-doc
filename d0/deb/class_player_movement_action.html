@@ -117,6 +117,8 @@ Public 멤버 함수</h2></td></tr>
 <tr class="separator:a075b263021f170d4184b4d79d9169852"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a067ae667ac297b927373c7d7e30c481d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/deb/class_player_movement_action.html#a067ae667ac297b927373c7d7e30c481d">EndAction</a> ()</td></tr>
 <tr class="separator:a067ae667ac297b927373c7d7e30c481d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf6d787191c829af4dad5eb24d562b0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/deb/class_player_movement_action.html#abf6d787191c829af4dad5eb24d562b0c">SetSpeed</a> (float speed)</td></tr>
+<tr class="separator:abf6d787191c829af4dad5eb24d562b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a687acffb7c7a2463172f2c815ab71de0"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/deb/class_player_movement_action.html#a687acffb7c7a2463172f2c815ab71de0">UpdateAction</a> ()</td></tr>
 <tr class="separator:a687acffb7c7a2463172f2c815ab71de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -210,6 +212,37 @@ Public 멤버 함수</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="abf6d787191c829af4dad5eb24d562b0c" name="abf6d787191c829af4dad5eb24d562b0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf6d787191c829af4dad5eb24d562b0c">&#9670;&#160;</a></span>SetSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerMovementAction.SetSpeed </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d2/da2/_player_movement_action_8cs_source.html">PlayerMovementAction.cs</a> 파일의 <a class="el" href="../../d2/da2/_player_movement_action_8cs_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        _maxSpeed = speed;</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a075b263021f170d4184b4d79d9169852" name="a075b263021f170d4184b4d79d9169852"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a075b263021f170d4184b4d79d9169852">&#9670;&#160;</a></span>StartAction()</h2>
 
@@ -262,22 +295,22 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/da2/_player_movement_action_8cs_source.html">PlayerMovementAction.cs</a> 파일의 <a class="el" href="../../d2/da2/_player_movement_action_8cs_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (Input.GetMouseButtonDown(0))</div>
-<div class="line"><span class="lineno">   59</span>        {</div>
-<div class="line"><span class="lineno">   60</span>            UpdateMouseDown();</div>
-<div class="line"><span class="lineno">   61</span>        }</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Input.GetMouseButton(0) &amp;&amp; _isDragging)</div>
-<div class="line"><span class="lineno">   63</span>        {</div>
-<div class="line"><span class="lineno">   64</span>            UpdateMouse();</div>
-<div class="line"><span class="lineno">   65</span>        }</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Input.GetMouseButtonUp(0) &amp;&amp; _isDragging)</div>
-<div class="line"><span class="lineno">   67</span>        {</div>
-<div class="line"><span class="lineno">   68</span>            UpdateMouseUp();</div>
-<div class="line"><span class="lineno">   69</span>        }</div>
-<div class="line"><span class="lineno">   70</span>        _actor.transform.rotation = Quaternion.LookRotation(_lookVector);</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
+<p class="definition"><a class="el" href="../../d2/da2/_player_movement_action_8cs_source.html">PlayerMovementAction.cs</a> 파일의 <a class="el" href="../../d2/da2/_player_movement_action_8cs_source.html#l00061">61</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (Input.GetMouseButtonDown(0))</div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            UpdateMouseDown();</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Input.GetMouseButton(0) &amp;&amp; _isDragging)</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            UpdateMouse();</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Input.GetMouseButtonUp(0) &amp;&amp; _isDragging)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            UpdateMouseUp();</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+<div class="line"><span class="lineno">   75</span>        _actor.transform.rotation = Quaternion.LookRotation(_lookVector);</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -316,7 +349,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d0/deb/class_player_movement_action.html">PlayerMovementAction</a></li>
-    <li class="footer">생성시간 : 화 8월 1 2023 00:47:36, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 수 8월 2 2023 00:41:37, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

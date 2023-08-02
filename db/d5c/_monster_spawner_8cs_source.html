@@ -132,62 +132,64 @@ $(document).ready(function(){initNavTree('db/d5c/_monster_spawner_8cs_source.htm
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            var spawnPoint = spawnPoints.SpawnPoints[i];</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordtype">string</span> monsterName = monsterResult[i];</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            var monster = _monsterPool.Get(monsterName);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            monster.transform.position = spawnPoint.position;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> OnCompleteDungeon()</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span>(_monsterPool != <span class="keyword">null</span>) _monsterPool.RemoveAll();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">private</span> <span class="keywordtype">string</span>[] GetMonsterInfo()</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">int</span> count = _dungeonInfo.MobCount;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">float</span>[] weight = <span class="keyword">new</span> <span class="keywordtype">float</span>[_dungeonInfo.Infos.Count];</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">float</span> sum = 0;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; _dungeonInfo.Infos.Count; ++i)</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            var info = _dungeonInfo.Infos[i];</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordtype">float</span> r = <span class="keywordtype">float</span>.Parse(info[<span class="stringliteral">&quot;mob_spawn_value&quot;</span>]?.ToString() ?? <span class="stringliteral">&quot;0&quot;</span>);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            weight[i] = r;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            sum += r;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordtype">string</span>[] result = <span class="keyword">new</span> <span class="keywordtype">string</span>[count];</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            var spawnPointPosition = spawnPoint.position;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            monster.transform.position = <span class="keyword">new</span> Vector3(spawnPointPosition.x,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                0, spawnPointPosition.z);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> OnCompleteDungeon()</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">if</span>(_monsterPool != <span class="keyword">null</span>) _monsterPool.RemoveAll();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">private</span> <span class="keywordtype">string</span>[] GetMonsterInfo()</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">int</span> count = _dungeonInfo.MobCount;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">float</span>[] weight = <span class="keyword">new</span> <span class="keywordtype">float</span>[_dungeonInfo.Infos.Count];</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">float</span> sum = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; _dungeonInfo.Infos.Count; ++i)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            var info = _dungeonInfo.Infos[i];</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordtype">float</span> r = <span class="keywordtype">float</span>.Parse(info[<span class="stringliteral">&quot;mob_spawn_value&quot;</span>]?.ToString() ?? <span class="stringliteral">&quot;0&quot;</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            weight[i] = r;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            sum += r;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; count; ++c)</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordtype">float</span> rand = Random.Range(0.0f, sum);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordtype">int</span> index = 0;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">for</span> (<span class="keywordtype">float</span> s = 0.0f; s &lt; rand;)</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                s += weight[index++];</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            result[c] = _dungeonInfo.Infos[index - 1]?[<span class="stringliteral">&quot;mob_id&quot;</span>]?.ToString();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// Start is called before the first frame update</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        IngameMainSystem.Instance.OnLoaded += () =&gt;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        {</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            _monsterPool = <a class="code hl_class" href="../../d5/dcc/class_ingame_main_system.html">IngameMainSystem</a>.Instance.Get&lt;<a class="code hl_class" href="../../dd/d6e/class_monster_pool.html">MonsterPool</a>&gt;(<span class="stringliteral">&quot;MonsterPool&quot;</span>);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        };</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">// Update is called once per frame</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">void</span> Update()</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">string</span>[] result = <span class="keyword">new</span> <span class="keywordtype">string</span>[count];</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; count; ++c)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordtype">float</span> rand = Random.Range(0.0f, sum);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordtype">int</span> index = 0;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">for</span> (<span class="keywordtype">float</span> s = 0.0f; s &lt; rand;)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                s += weight[index++];</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            result[c] = _dungeonInfo.Infos[index - 1]?[<span class="stringliteral">&quot;mob_id&quot;</span>]?.ToString();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// Start is called before the first frame update</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        IngameMainSystem.Instance.OnLoaded += () =&gt;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            _monsterPool = <a class="code hl_class" href="../../d5/dcc/class_ingame_main_system.html">IngameMainSystem</a>.Instance.Get&lt;<a class="code hl_class" href="../../dd/d6e/class_monster_pool.html">MonsterPool</a>&gt;(<span class="stringliteral">&quot;MonsterPool&quot;</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        };</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">// Update is called once per frame</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">void</span> Update()</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
 <div class="ttc" id="aclass_dungeon_f_s_m_system_1_1_dungeon_info_html"><div class="ttname"><a href="../../d1/df2/class_dungeon_f_s_m_system_1_1_dungeon_info.html">DungeonFSMSystem.DungeonInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dcd/_dungeon_f_s_m_system_8cs_source.html#l00012">DungeonFSMSystem.cs:13</a></div></div>
 <div class="ttc" id="aclass_dungeon_f_s_m_system_html"><div class="ttname"><a href="../../df/daf/class_dungeon_f_s_m_system.html">DungeonFSMSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dcd/_dungeon_f_s_m_system_8cs_source.html#l00009">DungeonFSMSystem.cs:10</a></div></div>
 <div class="ttc" id="aclass_ingame_main_system_html"><div class="ttname"><a href="../../d5/dcc/class_ingame_main_system.html">IngameMainSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d19/_ingame_main_system_8cs_source.html#l00008">IngameMainSystem.cs:9</a></div></div>
@@ -201,7 +203,7 @@ $(document).ready(function(){initNavTree('db/d5c/_monster_spawner_8cs_source.htm
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_9ad677904ed6b99c9ed539e667953d7e.html">Dungeon</a></li><li class="navelem"><b>MonsterSpawner.cs</b></li>
-    <li class="footer">생성시간 : 화 8월 1 2023 00:47:36, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 수 8월 2 2023 00:41:37, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

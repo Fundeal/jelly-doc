@@ -202,12 +202,12 @@ Protected 속성</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00126">126</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">  127</span>        {</div>
-<div class="line"><span class="lineno">  128</span>            <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#ac59b6c66437b3fddcc7777e7432b3e6a">_actions</a>.Add(action);</div>
-<div class="line"><span class="lineno">  129</span>            var instance = GenerateAction(action);</div>
-<div class="line"><span class="lineno">  130</span>            instance.gameObject.SetActive(_system.<a class="code hl_function" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a9f63b3bef2bedb1dc4782a006ae247c1">IsPrepareAvailable</a>(<span class="keyword">this</span>));</div>
-<div class="line"><span class="lineno">  131</span>        }</div>
+<p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00134">134</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#ac59b6c66437b3fddcc7777e7432b3e6a">_actions</a>.Add(action);</div>
+<div class="line"><span class="lineno">  137</span>            var instance = GenerateAction(action);</div>
+<div class="line"><span class="lineno">  138</span>            instance.gameObject.SetActive(_system.<a class="code hl_function" href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a9f63b3bef2bedb1dc4782a006ae247c1">IsPrepareAvailable</a>(<span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">  139</span>        }</div>
 <div class="ttc" id="aclass_fundeal_1_1_framework_1_1_prepare_base_html_ac59b6c66437b3fddcc7777e7432b3e6a"><div class="ttname"><a href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#ac59b6c66437b3fddcc7777e7432b3e6a">Fundeal.Framework.PrepareBase._actions</a></div><div class="ttdeci">List&lt; Action &gt; _actions</div><div class="ttdoc">해당 Prepare가 활성화되면 작동하는 Action 목록입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/df9/_prepare_base_8cs_source.html#l00025">PrepareBase.cs:25</a></div></div>
 <div class="ttc" id="aclass_fundeal_1_1_framework_1_1_prepare_system_html_a9f63b3bef2bedb1dc4782a006ae247c1"><div class="ttname"><a href="../../d5/d3f/class_fundeal_1_1_framework_1_1_prepare_system.html#a9f63b3bef2bedb1dc4782a006ae247c1">Fundeal.Framework.PrepareSystem.IsPrepareAvailable</a></div><div class="ttdeci">abstract bool IsPrepareAvailable(PrepareBase prepare)</div><div class="ttdoc">_pool에 있는 해당 Prepare가 실행 중인 상황인지 확인합니다.</div></div>
 </div><!-- fragment -->
@@ -242,14 +242,14 @@ Protected 속성</h2></td></tr>
 
 <p><a class="el" href="../../d6/d62/class_prepare_duration.html#a73e24ed7f0b4b7b29c7339c074f392a1">PrepareDuration</a>에서 재구현되었습니다.</p>
 
-<p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00102">102</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>        {</div>
-<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">foreach</span> (var action <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a8657fa9771bf410b1f6383fc40ec4385">_actionInstances</a>)</div>
-<div class="line"><span class="lineno">  105</span>            {</div>
-<div class="line"><span class="lineno">  106</span>                action.EndAction();</div>
-<div class="line"><span class="lineno">  107</span>                action.gameObject.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  108</span>            }</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
+<p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00110">110</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">foreach</span> (var action <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a8657fa9771bf410b1f6383fc40ec4385">_actionInstances</a>)</div>
+<div class="line"><span class="lineno">  113</span>            {</div>
+<div class="line"><span class="lineno">  114</span>                action.EndAction();</div>
+<div class="line"><span class="lineno">  115</span>                action.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  116</span>            }</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
 <div class="ttc" id="aclass_fundeal_1_1_framework_1_1_prepare_base_html_a8657fa9771bf410b1f6383fc40ec4385"><div class="ttname"><a href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a8657fa9771bf410b1f6383fc40ec4385">Fundeal.Framework.PrepareBase._actionInstances</a></div><div class="ttdeci">readonly List&lt; Action &gt; _actionInstances</div><div class="ttdoc">_actions 목록에 있는 모든 Action들을 인스턴스화 시켜 따로 저장하는 컨테이너입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/df9/_prepare_base_8cs_source.html#l00030">PrepareBase.cs:30</a></div></div>
 </div><!-- fragment -->
 <p class="reference">다음을 참조함 :  <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00030">Fundeal.Framework.PrepareBase._actionInstances</a>.</p>
@@ -287,11 +287,11 @@ Protected 속성</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00133">133</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">  133</span>                                                       : Action</div>
-<div class="line"><span class="lineno">  134</span>        {</div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#ac59b6c66437b3fddcc7777e7432b3e6a">_actions</a>.Where(action =&gt; action.enabled).OfType&lt;T&gt;().ToList();</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
+<p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00141">141</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                       : Action</div>
+<div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a8657fa9771bf410b1f6383fc40ec4385">_actionInstances</a>.OfType&lt;T&gt;().ToList();</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -322,9 +322,9 @@ Protected 속성</h2></td></tr>
 
 <p><a class="el" href="../../d7/da3/class_prepare_attack.html#a6f56e714d167404dfdbeefab4c4b70fd">PrepareAttack</a>에서 재구현되었습니다.</p>
 
-<p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00070">70</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>        {</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
+<p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00078">78</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -403,13 +403,15 @@ Protected 속성</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00143">143</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">  144</span>        {</div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">foreach</span> (var action <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a8657fa9771bf410b1f6383fc40ec4385">_actionInstances</a>.Where(action =&gt; action.enabled))</div>
-<div class="line"><span class="lineno">  146</span>            {</div>
-<div class="line"><span class="lineno">  147</span>                action.OnHit(attacker, collider);</div>
-<div class="line"><span class="lineno">  148</span>            }</div>
-<div class="line"><span class="lineno">  149</span>        }</div>
+<p><a class="el" href="../../d6/d62/class_prepare_duration.html#a6cd07c5df694252962c5ad75adf4e553">PrepareDuration</a>에서 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00151">151</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">foreach</span> (var action <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a8657fa9771bf410b1f6383fc40ec4385">_actionInstances</a>.Where(action =&gt; action.enabled))</div>
+<div class="line"><span class="lineno">  154</span>            {</div>
+<div class="line"><span class="lineno">  155</span>                action.OnHit(attacker, collider);</div>
+<div class="line"><span class="lineno">  156</span>            }</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">다음을 참조함 :  <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00030">Fundeal.Framework.PrepareBase._actionInstances</a>.</p>
 
@@ -451,8 +453,18 @@ Protected 속성</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   62</span>        {</div>
 <div class="line"><span class="lineno">   63</span>            _system = system;</div>
 <div class="line"><span class="lineno">   64</span>            _actor = _system.GetActor();</div>
-<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a8657fa9771bf410b1f6383fc40ec4385">_actionInstances</a>.Count &lt;= 0)</div>
+<div class="line"><span class="lineno">   67</span>            {</div>
+<div class="line"><span class="lineno">   68</span>                <span class="keywordflow">foreach</span> (var prefab <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#ac59b6c66437b3fddcc7777e7432b3e6a">_actions</a>)</div>
+<div class="line"><span class="lineno">   69</span>                {</div>
+<div class="line"><span class="lineno">   70</span>                    GenerateAction(prefab).gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   71</span>                }</div>
+<div class="line"><span class="lineno">   72</span>            }</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
 </div><!-- fragment -->
+<p class="reference">다음을 참조함 :  <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00030">Fundeal.Framework.PrepareBase._actionInstances</a>, <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00025">Fundeal.Framework.PrepareBase._actions</a>.</p>
+
 </div>
 </div>
 <a id="a411ac7bee80114c6ce2db3630c1e605a" name="a411ac7bee80114c6ce2db3630c1e605a"></a>
@@ -513,22 +525,22 @@ Protected 속성</h2></td></tr>
 
 <p><a class="el" href="../../d7/da3/class_prepare_attack.html#a19e957f226f7f83701c8f042a867f70b">PrepareAttack</a>, <a class="el" href="../../d6/d62/class_prepare_duration.html#a04a9caf288bb67e696e831c5f0ef1f9e">PrepareDuration</a>, <a class="el" href="../../d5/d0a/class_prepare_rand_duration.html#a8c4536ed51c09e89c6f37b70efa877f7">PrepareRandDuration</a>에서 재구현되었습니다.</p>
 
-<p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00082">82</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>        {</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a8657fa9771bf410b1f6383fc40ec4385">_actionInstances</a>.Count &lt;= 0)</div>
-<div class="line"><span class="lineno">   85</span>            {</div>
-<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">foreach</span> (var prefab <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#ac59b6c66437b3fddcc7777e7432b3e6a">_actions</a>)</div>
-<div class="line"><span class="lineno">   87</span>                {</div>
-<div class="line"><span class="lineno">   88</span>                    GenerateAction(prefab);</div>
-<div class="line"><span class="lineno">   89</span>                }</div>
-<div class="line"><span class="lineno">   90</span>            }</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">foreach</span> (var action <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a8657fa9771bf410b1f6383fc40ec4385">_actionInstances</a>)</div>
+<p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00090">90</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>        {</div>
+<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a8657fa9771bf410b1f6383fc40ec4385">_actionInstances</a>.Count &lt;= 0)</div>
 <div class="line"><span class="lineno">   93</span>            {</div>
-<div class="line"><span class="lineno">   94</span>                action.gameObject.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   95</span>                action.StartAction();</div>
-<div class="line"><span class="lineno">   96</span>            }</div>
-<div class="line"><span class="lineno">   97</span>        }</div>
+<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">foreach</span> (var prefab <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#ac59b6c66437b3fddcc7777e7432b3e6a">_actions</a>)</div>
+<div class="line"><span class="lineno">   95</span>                {</div>
+<div class="line"><span class="lineno">   96</span>                    GenerateAction(prefab);</div>
+<div class="line"><span class="lineno">   97</span>                }</div>
+<div class="line"><span class="lineno">   98</span>            }</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">foreach</span> (var action <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a8657fa9771bf410b1f6383fc40ec4385">_actionInstances</a>)</div>
+<div class="line"><span class="lineno">  101</span>            {</div>
+<div class="line"><span class="lineno">  102</span>                action.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  103</span>                action.StartAction();</div>
+<div class="line"><span class="lineno">  104</span>            }</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">다음을 참조함 :  <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00030">Fundeal.Framework.PrepareBase._actionInstances</a>, <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00025">Fundeal.Framework.PrepareBase._actions</a>.</p>
 
@@ -559,13 +571,13 @@ Protected 속성</h2></td></tr>
 
 <p>_actionInstances 목록에 있는 모든 Action들의 업데이트 함수를 실행하는 함수입니다.  </p>
 
-<p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00114">114</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>        {</div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">foreach</span> (var action <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a8657fa9771bf410b1f6383fc40ec4385">_actionInstances</a>)</div>
-<div class="line"><span class="lineno">  117</span>            {</div>
-<div class="line"><span class="lineno">  118</span>                action.UpdateAction();</div>
-<div class="line"><span class="lineno">  119</span>            }</div>
-<div class="line"><span class="lineno">  120</span>        }</div>
+<p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00122">122</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">foreach</span> (var action <span class="keywordflow">in</span> <a class="code hl_variable" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html#a8657fa9771bf410b1f6383fc40ec4385">_actionInstances</a>)</div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                action.UpdateAction();</div>
+<div class="line"><span class="lineno">  127</span>            }</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">다음을 참조함 :  <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00030">Fundeal.Framework.PrepareBase._actionInstances</a>.</p>
 
@@ -598,7 +610,7 @@ Protected 속성</h2></td></tr>
 
 <p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00030">30</a> 번째 라인에서 정의되었습니다.</p>
 
-<p class="reference">다음에 의해서 참조됨 :  <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00102">Fundeal.Framework.PrepareBase.EndState()</a>, <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00143">Fundeal.Framework.PrepareBase.OnHit()</a>, <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00082">Fundeal.Framework.PrepareBase.StartState()</a>, <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00114">Fundeal.Framework.PrepareBase.UpdateActions()</a>.</p>
+<p class="reference">다음에 의해서 참조됨 :  <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00110">Fundeal.Framework.PrepareBase.EndState()</a>, <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00151">Fundeal.Framework.PrepareBase.OnHit()</a>, <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00061">Fundeal.Framework.PrepareBase.Register()</a>, <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00090">Fundeal.Framework.PrepareBase.StartState()</a>, <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00122">Fundeal.Framework.PrepareBase.UpdateActions()</a>.</p>
 
 </div>
 </div>
@@ -626,7 +638,7 @@ Protected 속성</h2></td></tr>
 
 <p class="definition"><a class="el" href="../../db/df9/_prepare_base_8cs_source.html">PrepareBase.cs</a> 파일의 <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00025">25</a> 번째 라인에서 정의되었습니다.</p>
 
-<p class="reference">다음에 의해서 참조됨 :  <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00126">Fundeal.Framework.PrepareBase.AddAction()</a>, <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00082">Fundeal.Framework.PrepareBase.StartState()</a>.</p>
+<p class="reference">다음에 의해서 참조됨 :  <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00134">Fundeal.Framework.PrepareBase.AddAction()</a>, <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00061">Fundeal.Framework.PrepareBase.Register()</a>, <a class="el" href="../../db/df9/_prepare_base_8cs_source.html#l00090">Fundeal.Framework.PrepareBase.StartState()</a>.</p>
 
 </div>
 </div>
@@ -705,7 +717,7 @@ Protected 속성</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/d7d/namespace_fundeal.html">Fundeal</a></li><li class="navelem"><a class="el" href="../../d2/d28/namespace_fundeal_1_1_framework.html">Framework</a></li><li class="navelem"><a class="el" href="../../d7/d00/class_fundeal_1_1_framework_1_1_prepare_base.html">PrepareBase</a></li>
-    <li class="footer">생성시간 : 화 8월 1 2023 00:47:37, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 수 8월 2 2023 00:41:37, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

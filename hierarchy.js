@@ -36,6 +36,8 @@ var hierarchy =
     [ "MonoBehaviour", null, [
       [ "CameraFixer", "de/dcb/class_camera_fixer.html", null ],
       [ "CameraTracer", "db/d34/class_camera_tracer.html", null ],
+      [ "DungeonEscapeTestUI", "db/d2a/class_dungeon_escape_test_u_i.html", null ],
+      [ "DungeonTicketData", "d0/d22/class_dungeon_ticket_data.html", null ],
       [ "DungeonUIViewer", "d5/d01/class_dungeon_u_i_viewer.html", null ],
       [ "Fundeal.Framework.Action", "dd/d65/class_fundeal_1_1_framework_1_1_action.html", [
         [ "AttackAction", "d4/dbb/class_attack_action.html", null ],
@@ -76,7 +78,10 @@ var hierarchy =
       [ "InspectorFSMBase< TStateEnum, TFSMSystem >", "db/d6e/class_inspector_f_s_m_base.html", null ],
       [ "InspectorFSMSystem< TStateEnum, TBaseClass >", "d3/d62/class_inspector_f_s_m_system.html", null ],
       [ "LoadResourcesSystem", "df/d21/class_load_resources_system.html", null ],
+      [ "LobbyDoor", "d0/de0/class_lobby_door.html", null ],
+      [ "LobbyDungeonEnterUI", "d7/de6/class_lobby_dungeon_enter_u_i.html", null ],
       [ "LobbyGameObjectAttractor", "d8/dbe/class_lobby_game_object_attractor.html", null ],
+      [ "LobbyPlayerStatUI", "d2/dcd/class_lobby_player_stat_u_i.html", null ],
       [ "MonsterSpawner", "d8/d3d/class_monster_spawner.html", null ],
       [ "SystemPool", "dc/d66/class_system_pool.html", [
         [ "GameSystem", "d6/dce/class_game_system.html", null ],
@@ -92,6 +97,7 @@ var hierarchy =
     [ "MonsterSpawner.SpawnerInfo", "d9/d5d/class_monster_spawner_1_1_spawner_info.html", null ],
     [ "SystemBase", "d6/d53/interface_system_base.html", [
       [ "DungeonFSMSystem", "df/daf/class_dungeon_f_s_m_system.html", null ],
+      [ "DungeonTicketData", "d0/d22/class_dungeon_ticket_data.html", null ],
       [ "GameSystem", "d6/dce/class_game_system.html", null ],
       [ "LoadResourcesSystem", "df/d21/class_load_resources_system.html", null ],
       [ "MonsterPool", "dd/d6e/class_monster_pool.html", null ]

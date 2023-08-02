@@ -99,18 +99,33 @@ $(document).ready(function(){initNavTree('da/d37/_test_actor_8cs_source.html','.
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../d0/d1a/class_test_actor.html">    6</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d0/d1a/class_test_actor.html">TestActor</a> : <a class="code hl_class" href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Actor</a></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="comment">// Start is called before the first frame update</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordtype">void</span> Start()</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    }</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">// Update is called once per frame</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Update()</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        base.Update();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> _isLoaded = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="comment">// Start is called before the first frame update</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        LoadPlayerStats();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">// Update is called once per frame</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Update()</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        base.Update();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> LoadPlayerStats()</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        var rigid = GetComponent&lt;Rigidbody&gt;();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        rigid.mass = PlayerPrefs.GetFloat(<span class="stringliteral">&quot;test.player.mass&quot;</span>, 1);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        rigid.drag = PlayerPrefs.GetFloat(<span class="stringliteral">&quot;test.player.drag&quot;</span>, 0.5f);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        rigid.angularDrag = PlayerPrefs.GetFloat(<span class="stringliteral">&quot;test.player.angularDrag&quot;</span>, 0.05f);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        var bounceActions = GetActions&lt;BounceAction&gt;();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="comment">// bounceActions[0].SetForceMultiplier(PlayerPrefs.GetFloat(&quot;test.player.bounce&quot;, 20));</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        var moveActions = GetActions&lt;PlayerMovementAction&gt;();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        moveActions[0].SetSpeed(PlayerPrefs.GetFloat(<span class="stringliteral">&quot;test.player.speed&quot;</span>, 40));</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
 <div class="ttc" id="aclass_fundeal_1_1_framework_1_1_actor_html"><div class="ttname"><a href="../../d0/d25/class_fundeal_1_1_framework_1_1_actor.html">Fundeal.Framework.Actor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d68/_actor_8cs_source.html#l00009">Actor.cs:10</a></div></div>
 <div class="ttc" id="aclass_test_actor_html"><div class="ttname"><a href="../../d0/d1a/class_test_actor.html">TestActor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d37/_test_actor_8cs_source.html#l00006">TestActor.cs:7</a></div></div>
 <div class="ttc" id="anamespace_fundeal_1_1_framework_html"><div class="ttname"><a href="../../d2/d28/namespace_fundeal_1_1_framework.html">Fundeal.Framework</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0b/_action_8cs_source.html#l00005">Action.cs:6</a></div></div>
@@ -120,7 +135,7 @@ $(document).ready(function(){initNavTree('da/d37/_test_actor_8cs_source.html','.
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_4f3b68dc77c6199308398c9d552a8742.html">Actor</a></li><li class="navelem"><b>TestActor.cs</b></li>
-    <li class="footer">생성시간 : 화 8월 1 2023 00:47:36, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 수 8월 2 2023 00:41:37, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

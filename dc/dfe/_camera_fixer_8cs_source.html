@@ -106,42 +106,46 @@ $(document).ready(function(){initNavTree('dc/dfe/_camera_fixer_8cs_source.html',
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">private</span> <a class="code hl_class" href="../../df/daf/class_dungeon_f_s_m_system.html">DungeonFSMSystem</a> _dungeonSystem;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    [SerializeField, Header(<span class="stringliteral">&quot;Infos&quot;</span>)]</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">private</span> <span class="keywordtype">float</span> _spaceOffset = 0;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">private</span> <span class="keywordtype">float</span> _traceSmooth = 4;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    [SerializeField]</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">private</span> <span class="keywordtype">float</span> _traceSmooth = 4;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">private</span> <span class="keywordtype">float</span> _resultZ = 0;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// Start is called before the first frame update</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> Init()</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        var dungeon = _dungeonSystem.CurDungeonInstance as <a class="code hl_class" href="../../dc/db2/class_normal_dungeon.html">NormalDungeon</a>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">float</span> sd = _camera.transform.localPosition.z;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">float</span> f = (_camera.fieldOfView * 0.5f) * (Mathf.PI / 180.0f);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">float</span> dt = Mathf.Tan(f) * sd;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        dt *= _camera.aspect;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        dt += _spaceOffset;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        _resultZ = -sd * (dungeon.DungeonArea.size.x * 0.5f) / dt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        _resultZ = _camera.transform.localPosition.z;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// Update is called once per frame</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> Update()</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">if</span> (_dungeonSystem.CurDungeonInstance == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">private</span> <span class="keywordtype">float</span> _resultSize = 0;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">private</span> <span class="keywordtype">float</span> _srcAspect = 0.5625f;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// Start is called before the first frame update</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> Init()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="comment">// var dungeon = _dungeonSystem.CurDungeonInstance as NormalDungeon;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="comment">// float sd = _camera.transform.localPosition.z;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="comment">// float f = (_camera.fieldOfView * 0.5f) * (Mathf.PI / 180.0f);</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="comment">// float dt = Mathf.Tan(f) * sd;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="comment">// dt *= _camera.aspect;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="comment">// dt += _spaceOffset;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        ChangeCameraPadding();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        ChangeCameraPadding();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> ChangeCameraPadding()</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        var dungeon = _dungeonSystem.CurDungeonInstance as <a class="code hl_class" href="../../dc/db2/class_normal_dungeon.html">NormalDungeon</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        _resultSize = dungeon?.SetCameraSize(_camera) ?? 20.0f;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        transform.position = Vector3.Lerp(transform.position, _dungeonSystem.CurDungeonInstance.transform.position,</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            _traceSmooth * Time.deltaTime);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        _camera.transform.localPosition =</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keyword">new</span> Vector3(0, 0, Mathf.Lerp(_camera.transform.localPosition.z, _resultZ, _traceSmooth * Time.deltaTime));</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// Update is called once per frame</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> Update()</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">if</span> (_dungeonSystem.CurDungeonInstance == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        transform.position = Vector3.Lerp(transform.position, _dungeonSystem.CurDungeonInstance.transform.position,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            _traceSmooth * Time.deltaTime);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        _camera.orthographicSize = Mathf.Lerp(_camera.orthographicSize, _resultSize, _traceSmooth * Time.deltaTime);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
 <div class="ttc" id="aclass_camera_fixer_html"><div class="ttname"><a href="../../de/dcb/class_camera_fixer.html">CameraFixer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/_camera_fixer_8cs_source.html#l00006">CameraFixer.cs:7</a></div></div>
 <div class="ttc" id="aclass_dungeon_f_s_m_system_html"><div class="ttname"><a href="../../df/daf/class_dungeon_f_s_m_system.html">DungeonFSMSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dcd/_dungeon_f_s_m_system_8cs_source.html#l00009">DungeonFSMSystem.cs:10</a></div></div>
 <div class="ttc" id="aclass_normal_dungeon_html"><div class="ttname"><a href="../../dc/db2/class_normal_dungeon.html">NormalDungeon</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dc8/_normal_dungeon_8cs_source.html#l00010">NormalDungeon.cs:11</a></div></div>
@@ -151,7 +155,7 @@ $(document).ready(function(){initNavTree('dc/dfe/_camera_fixer_8cs_source.html',
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_e82d518b81fd896db0329786809da157.html">Camera</a></li><li class="navelem"><b>CameraFixer.cs</b></li>
-    <li class="footer">생성시간 : 화 8월 1 2023 00:47:36, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 수 8월 2 2023 00:41:37, 프로젝트명 : Jelly, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>
